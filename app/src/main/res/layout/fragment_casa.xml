@@ -10,37 +10,24 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".HomeFragment">
+        tools:context=".CasaFragment">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/backgroundL3"
+            android:background="@color/my_custom_silver"
             android:minHeight="?attr/actionBarSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/home_recycler"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:layout_marginTop="?attr/actionBarSize"
-            android:layout_marginBottom="?attr/actionBarSize"
-            app:layout_constraintTop_toBottomOf="@id/toolbar"
-            app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
-            tools:ignore="NotSibling" />
-
-
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/backgroundL3"
+            android:background="@color/my_custom_silver"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -51,5 +38,4 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </layout>

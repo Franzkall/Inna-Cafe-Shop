@@ -2,7 +2,6 @@
     <string name="app_name">AbschlussAufgabe</string>
 
 
-
     <string name="drinks">Drinks</string>
     <string name="smoothies">Smoothies</string>
     <string name="inna_s_kaffee_shop">Inna\'s Kaffee-Shop</string>
@@ -10,6 +9,11 @@
     <string name="robusta_caffe_moers">Robusta caffe`Moers</string>
     <string name="Robusta_Cafe_Moers" />
     <string name="willkommen">Willkommen</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="moers">Moers</string>
+    <string name="Moers">Moers</string>
+    <string name="cafe_bar">Cafe-Bar</string>
 
 
 </resources>
