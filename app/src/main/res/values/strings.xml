@@ -14,6 +14,10 @@
     <string name="moers">Moers</string>
     <string name="Moers">Moers</string>
     <string name="cafe_bar">Cafe-Bar</string>
+    <string name="klassiker">Klassiker</string>
+    <string name="spezialit_ten">Spezialitäten</string>
+    <string name="robusta">Robusta</string>
+    <string name="preisliste">Preisliste</string>
 
 
 </resources>

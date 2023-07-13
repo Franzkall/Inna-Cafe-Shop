@@ -27,7 +27,7 @@ class ImageAdapter (
 
     override fun getItemCount(): Int = images.size
 
-    override fun onBindViewHolder(holder: ImageAdapter.ImageViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
         holder.bindView(images[position])
 
     }

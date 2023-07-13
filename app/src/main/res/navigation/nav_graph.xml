@@ -3,22 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainActivity">
+    app:startDestination="@id/helloFragment">
     <activity
         android:id="@+id/mainActivity"
         android:name="com.example.abschlussaufgabe.MainActivity"
-        android:label="MainActivity" />
+        android:label="MainActivity"
+        tools:layout="@layout/activity_main"/>
     <fragment
         android:id="@+id/casaFragment"
         android:name="com.example.abschlussaufgabe.CasaFragment"
+        tools:layout="@layout/fragment_casa"
         android:label="CasaFragment" >
         <action
             android:id="@+id/action_casaFragment_to_mainActivity"
-            app:destination="@id/mainActivity" />
+            app:destination="@id/mainActivity"/>
     </fragment>
     <fragment
         android:id="@+id/helloFragment"
         android:name="com.example.abschlussaufgabe.HelloFragment"
+        tools:layout="@layout/fragment_hello"
         android:label="HelloFragment" >
         <action
             android:id="@+id/action_helloFragment_to_mainActivity"
@@ -27,6 +30,7 @@
     <fragment
         android:id="@+id/sortimentFragment"
         android:name="com.example.abschlussaufgabe.SortimentFragment"
+        tools:layout="@layout/fragment_sortiment"
         android:label="SortimentFragment" >
         <action
             android:id="@+id/action_sortimentFragment_to_mainActivity"

@@ -13,19 +13,6 @@
         android:background="@drawable/stile"
         tools:context=".HelloFragment">
 
-       <TextView
-           android:id="@+id/header"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="60dp"
-           android:text="@string/cafe_bar"
-           android:textColor="@color/material_deep_orange_500"
-           android:textSize="60sp"
-           android:textStyle="bold"
-           android:fontFamily="sans-serif-condensed"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toTopOf="parent"/>
 
         <ImageView
             android:id="@+id/picture1"
@@ -39,21 +26,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/down"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="-220dp"
-            android:layout_marginTop="-190dp"
-            android:layout_marginBottom="-620dp"
-            android:text="@string/Moers"
-            android:textColor="@color/material_deep_orange_500"
-            android:textSize="60sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed"
-            app:layout_constraintBottom_toTopOf="@+id/picture1"
-            app:layout_constraintStart_toEndOf="@+id/picture1"
-            app:layout_constraintTop_toBottomOf="@+id/picture1" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
