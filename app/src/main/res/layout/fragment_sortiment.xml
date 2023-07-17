@@ -34,56 +34,19 @@
             app:layout_constraintBottom_toBottomOf="@+id/toolbar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/toolbar"
-            app:layout_constraintTop_toTopOf="@+id/toolbar" />
+            app:layout_constraintTop_toTopOf="@+id/toolbar"/>
 
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_view"
-            android:layout_width="320dp"
-            android:layout_height="400dp"
-            android:layout_marginStart="46dp"
-            android:layout_marginEnd="45dp"
-            android:backgroundTint="@color/material_lime_500"
-            app:cardCornerRadius="15dp"
-            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-            app:layout_constraintEnd_toEndOf="@id/bottomNavigationView"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" >
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/isabella" />
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/material_lime_500"
-            android:text="@string/klassiker"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/card_view"
-            app:layout_editor_absoluteX="87dp"
-            app:layout_editor_absoluteY="65dp"/>
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_special"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:menu="@menu/bottom_nav_menu"/>
-
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

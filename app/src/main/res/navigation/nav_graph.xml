@@ -7,14 +7,16 @@
     <fragment
         android:id="@+id/helloFragment"
         android:name="com.example.abschlussaufgabe.HelloFragment"
-        android:label="HelloFragment" >
+        tools:layout="@layout/fragment_hello"
+        android:label="HelloFragment">
         <action
             android:id="@+id/action_helloFragment_to_casaFragment"
-            app:destination="@id/casaFragment" />
+            app:destination="@id/casaFragment"/>
     </fragment>
     <fragment
         android:id="@+id/casaFragment"
         android:name="com.example.abschlussaufgabe.CasaFragment"
+        tools:layout="@layout/fragment_casa"
         android:label="CasaFragment" >
         <action
             android:id="@+id/action_casaFragment_to_sortimentFragment"
@@ -23,6 +25,7 @@
     <fragment
         android:id="@+id/sortimentFragment"
         android:name="com.example.abschlussaufgabe.SortimentFragment"
+        tools:layout="@layout/fragment_sortiment"
         android:label="SortimentFragment" >
         <action
             android:id="@+id/action_sortimentFragment_to_moneyFragment"
@@ -34,6 +37,7 @@
     <fragment
         android:id="@+id/moneyFragment"
         android:name="com.example.abschlussaufgabe.MoneyFragment"
+        tools:layout="@layout/fragment_money"
         android:label="MoneyFragment" >
         <action
             android:id="@+id/action_moneyFragment_to_casaFragment"
