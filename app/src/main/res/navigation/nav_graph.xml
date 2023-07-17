@@ -3,47 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/helloFragment">
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.abschlussaufgabe.MainActivity"
-        android:label="MainActivity"
-        tools:layout="@layout/activity_main"/>
-    <fragment
-        android:id="@+id/casaFragment"
-        android:name="com.example.abschlussaufgabe.CasaFragment"
-        tools:layout="@layout/fragment_casa"
-        android:label="CasaFragment" >
-        <action
-            android:id="@+id/action_casaFragment_to_mainActivity"
-            app:destination="@id/mainActivity"/>
-    </fragment>
+    app:startDestination="@id/casaFragment">
     <fragment
         android:id="@+id/helloFragment"
         android:name="com.example.abschlussaufgabe.HelloFragment"
-        tools:layout="@layout/fragment_hello"
         android:label="HelloFragment" >
         <action
-            android:id="@+id/action_helloFragment_to_mainActivity"
-            app:destination="@id/mainActivity" />
+            android:id="@+id/action_helloFragment_to_casaFragment"
+            app:destination="@id/casaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/casaFragment"
+        android:name="com.example.abschlussaufgabe.CasaFragment"
+        android:label="CasaFragment" >
+        <action
+            android:id="@+id/action_casaFragment_to_sortimentFragment"
+            app:destination="@id/sortimentFragment" />
     </fragment>
     <fragment
         android:id="@+id/sortimentFragment"
         android:name="com.example.abschlussaufgabe.SortimentFragment"
-        tools:layout="@layout/fragment_sortiment"
         android:label="SortimentFragment" >
         <action
-            android:id="@+id/action_sortimentFragment_to_mainActivity"
-            app:destination="@id/mainActivity" />
+            android:id="@+id/action_sortimentFragment_to_moneyFragment"
+            app:destination="@id/moneyFragment" />
+        <action
+            android:id="@+id/action_sortimentFragment_to_casaFragment"
+            app:destination="@id/casaFragment" />
     </fragment>
     <fragment
         android:id="@+id/moneyFragment"
         android:name="com.example.abschlussaufgabe.MoneyFragment"
-        android:label="fragment_money"
-        tools:layout="@layout/fragment_money" >
+        android:label="MoneyFragment" >
         <action
-            android:id="@+id/action_moneyFragment_to_mainActivity"
-            app:destination="@id/mainActivity" />
+            android:id="@+id/action_moneyFragment_to_casaFragment"
+            app:destination="@id/casaFragment" />
     </fragment>
 </navigation>
 
