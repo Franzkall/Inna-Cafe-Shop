@@ -23,6 +23,6 @@ class ImageAdapter(
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val image = dataset[position]
-        holder.binding.collage.setImageResource(image.imageSrc)
+        holder.binding.imageView.setImageResource(image.imageSrc)
     }
 }
