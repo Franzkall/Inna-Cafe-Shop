@@ -2,18 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/home"
+        android:id="@+id/casaFragment"
         android:icon="@drawable/baseline_home_24"
-        android:title="Item" />
+        android:title="Home" />
 
     <item
-        android:id="@+id/search"
+        android:id="@+id/sortimentFragment"
         android:icon="@drawable/baseline_search_24"
-        android:title="Item" />
+        android:title="@string/specials"/>
 
     <item
-        android:id="@+id/price"
+        android:id="@+id/moneyFragment"
         android:icon="@drawable/baseline_euro_24"
-        android:title="Item" />
+        android:title="@string/preisliste"/>
 
 </menu>
