@@ -1,15 +1,12 @@
 package com.example.abschlussaufgabe
 
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.abschlussaufgabe.databinding.ActivityMainBinding
 
 
@@ -29,8 +26,11 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         val bottomNavigationBar = binding.bottomNavigationView
-
         setupWithNavController(bottomNavigationBar,navController)
+    }
+    fun navigateToNextFragment() {
+
+        navController.navigate(R.id.casaFragment)
     }
 }
 
