@@ -1,6 +1,5 @@
 package com.example.abschlussaufgabe.data
 
-import android.graphics.Picture
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.Drink
 import com.example.abschlussaufgabe.data.model.Image
@@ -11,6 +10,7 @@ class DataSource {
     fun loadImages(): List<Image> {
 
         return listOf(
+        Image(R.drawable.tu),
         Image(R.drawable.one),
         Image(R.drawable.two),
         Image(R.drawable.inside),
