@@ -25,11 +25,7 @@
                 android:scaleType="centerCrop"
                 tools:srcCompat="@drawable/tu"/>
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="89dp"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+
 
         </com.google.android.material.card.MaterialCardView>
 
