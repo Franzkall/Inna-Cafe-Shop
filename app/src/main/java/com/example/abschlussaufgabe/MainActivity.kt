@@ -34,4 +34,4 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-
+// Notiz: ich pushe zurzeit nicht weil ich parallel ein zweite projekt erstellt habe um funktionen auszuprobieren. Für eventuelle fragen stehe ich zur verfügung.
