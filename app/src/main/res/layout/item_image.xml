@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <!-- Hier können deine Datenvariablen deklariert werden, falls benötigt -->
+
     </data>
 
     <LinearLayout
@@ -12,29 +12,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Dein ImageView für das Foto -->
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
+            android:padding="8dp"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
             tools:srcCompat="@drawable/tu" />
 
-        <!-- Platzhalter für den Button, um die Höhe festzulegen (optional) -->
         <View
             android:layout_width="match_parent"
             android:layout_height="8dp" />
 
-        <!-- Button unter dem Foto -->
-        <Button
-            android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Button"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/material_lime_500" />
+
 
     </LinearLayout>
 

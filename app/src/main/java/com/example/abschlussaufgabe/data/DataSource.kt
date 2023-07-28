@@ -21,13 +21,13 @@ class DataSource {
         )
     }
 
-    fun loadDrinks(): List<Drink> {
+   // fun loadDrinks(): List<Drink> {
 
-        return listOf(
-            Drink(R.drawable.lavazza),
-            Drink(R.drawable.exp),
-            Drink(R.drawable.lm)
-        )
-    }
+      //  return listOf(
+      //      Drink(R.drawable.lavazza),
+      //      Drink(R.drawable.exp),
+       //     Drink(R.drawable.lm)
+       // )
+  //  }
     
 }

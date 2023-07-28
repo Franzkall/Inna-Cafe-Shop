@@ -9,7 +9,7 @@
     <string name="robusta_caffe_moers">Robusta caffe`Moers</string>
     <string name="Robusta_Cafe_Moers" />
     <string name="willkommen">Willkommen</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="moers">Moers</string>
     <string name="Moers">Moers</string>
@@ -19,6 +19,7 @@
     <string name="robusta">Robusta</string>
     <string name="preisliste">Preisliste</string>
     <string name="specials">Specials</string>
+    <string name="special">Special</string>
 
 
 </resources>
