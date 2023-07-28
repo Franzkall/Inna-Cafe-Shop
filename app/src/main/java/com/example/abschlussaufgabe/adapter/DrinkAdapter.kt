@@ -23,8 +23,6 @@ class DrinkAdapter(
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val drink = dataset[position]
-        holder.binding.imageView.setImageResource(drink.drinkSrc)
+        holder.binding.imageView.setImageResource(drink.cover)
     }
 }
-
-
