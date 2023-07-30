@@ -1,8 +1,5 @@
 package com.example.abschlussaufgabe.data.model
 
-  val DRINK_ID_EXTRA = "drinkExtra"
-
-var drinkList = mutableListOf<Drink>()
 
 class Drink(
     var cover: Int,
@@ -11,6 +8,11 @@ class Drink(
     var description: String,
     val id: Int? = drinkList.size
 )
+
+var drinkList = mutableListOf<Drink>()
+
+val DRINK_ID_EXTRA = "drinkExtra"
+
 
 
 

@@ -14,8 +14,8 @@ class DrinkAdapter(
 ) : RecyclerView.Adapter<DrinkViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DrinkViewHolder {
-        val inflater = LayoutInflater.from(parent.context)
-        val binding = HotAndColdBinding.inflate(inflater, parent, false)
+        val from = LayoutInflater.from(parent.context)
+        val binding = HotAndColdBinding.inflate(from, parent, false)
         return DrinkViewHolder(binding, clickListener)
     }
 
