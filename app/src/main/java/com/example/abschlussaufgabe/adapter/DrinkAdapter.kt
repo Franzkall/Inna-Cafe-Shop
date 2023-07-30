@@ -3,26 +3,26 @@ package com.example.abschlussaufgabe.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.abschlussaufgabe.clicklistener.DrinkClickListener
 import com.example.abschlussaufgabe.data.model.Drink
-import com.example.abschlussaufgabe.databinding.ItemImageBinding
+import com.example.abschlussaufgabe.databinding.HotAndColdBinding
+import com.example.abschlussaufgabe.viewholder.DrinkViewHolder
 
 class DrinkAdapter(
-    private val dataset: List<Drink>
-) : RecyclerView.Adapter<DrinkAdapter.ItemViewHolder>() {
+    private val drinks: List<Drink>,
+    private val clickListener: DrinkClickListener
+) : RecyclerView.Adapter<DrinkViewHolder>() {
 
-    class ItemViewHolder(val binding: ItemImageBinding) : RecyclerView.ViewHolder(binding.root)
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val binding = ItemImageBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ItemViewHolder(binding)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DrinkViewHolder {
+        val inflater = LayoutInflater.from(parent.context)
+        val binding = HotAndColdBinding.inflate(inflater, parent, false)
+        return DrinkViewHolder(binding, clickListener)
     }
 
-    override fun getItemCount(): Int {
-        return dataset.size
+    override fun onBindViewHolder(holder: DrinkViewHolder, position: Int) {
+        val drink = drinks[position] // Holen Sie sich das aktuelle Drink-Objekt aus der Liste
+        holder.bindDrink(drink) // Übergabe des Drink-Objekts an den ViewHolder
     }
 
-    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val drink = dataset[position]
-        holder.binding.imageView.setImageResource(drink.cover)
-    }
+    override fun getItemCount(): Int = drinks.size
 }
