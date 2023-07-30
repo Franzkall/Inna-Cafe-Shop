@@ -18,10 +18,6 @@ class SortimentFragment : Fragment(), DrinkClickListener {
     private lateinit var binding: FragmentSortimentBinding
     private val drinkList = ArrayList<Drink>()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -8,7 +8,6 @@ import com.example.abschlussaufgabe.databinding.HotAndColdBinding
 class DrinkViewHolder (
     hotAndColdBinding: HotAndColdBinding,
     private val clickListener: DrinkClickListener
-
 ) : RecyclerView.ViewHolder(hotAndColdBinding.root) {
 
     fun bindDrink(drink: Drink) {

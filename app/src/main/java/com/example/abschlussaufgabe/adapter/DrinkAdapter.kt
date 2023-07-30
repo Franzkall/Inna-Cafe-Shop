@@ -20,8 +20,8 @@ class DrinkAdapter(
     }
 
     override fun onBindViewHolder(holder: DrinkViewHolder, position: Int) {
-        val drink = drinks[position] // Holen Sie sich das aktuelle Drink-Objekt aus der Liste
-        holder.bindDrink(drink) // Übergabe des Drink-Objekts an den ViewHolder
+        val drink = drinks[position]
+        holder.bindDrink(drink)
     }
 
     override fun getItemCount(): Int = drinks.size
