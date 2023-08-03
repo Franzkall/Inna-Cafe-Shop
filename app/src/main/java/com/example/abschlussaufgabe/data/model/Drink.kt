@@ -6,7 +6,7 @@ class Drink(
     var author: String,
     var title: String,
     var description: String,
-    val id: Int? = drinkList.size
+    var id: Int = 0
 )
 
 var drinkList = mutableListOf<Drink>()

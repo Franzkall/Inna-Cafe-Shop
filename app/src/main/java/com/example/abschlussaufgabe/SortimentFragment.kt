@@ -46,7 +46,7 @@ class SortimentFragment : Fragment(), DrinkClickListener {
             "Enrico",
             "Originale",
             "Das Original aus Italien. Stark und konzentriert für den perfekten Weckruf!"
-        )
+        ).apply { id = 1 }
         drinkList.add(drink1)
 
         val drink2 = Drink(
@@ -54,7 +54,7 @@ class SortimentFragment : Fragment(), DrinkClickListener {
             "luigi",
             "essenza",
             "Frühstück wie in Italien. Sein Geschmack ist einfach perfekt."
-        )
+        ).apply { id = 2 }
         drinkList.add(drink2)
 
         val drink3 = Drink(
@@ -62,7 +62,7 @@ class SortimentFragment : Fragment(), DrinkClickListener {
             "Mario",
             "Buono",
             "Fein und süß, ob im Winter oder im Sommer, Balsam für die Seele."
-        )
+        ).apply { id = 3 }
         drinkList.add(drink3)
 
         val drink4 = Drink(
@@ -70,7 +70,7 @@ class SortimentFragment : Fragment(), DrinkClickListener {
             "Sandro",
             "Gustoso",
             "Modern.. Modern, eine Variation, die besonders beliebt ist."
-        )
+        ).apply { id = 4 }
         drinkList.add(drink4)
 
         val drink5 = Drink(
@@ -78,7 +78,7 @@ class SortimentFragment : Fragment(), DrinkClickListener {
             "Bruce",
             "Delicato",
             "Global auch in unserem Lieblingsgetränk."
-        )
+        ).apply { id = 5 }
         drinkList.add(drink5)
 
         val drink6 = Drink(
@@ -86,7 +86,7 @@ class SortimentFragment : Fragment(), DrinkClickListener {
             "Latte Macchiato",
             "Classico",
             "Feiner Geschmack, langer Genuss."
-        )
+        ).apply { id = 6 }
         drinkList.add(drink6)
 
         drinkList.add(drink1)

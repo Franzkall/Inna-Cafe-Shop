@@ -12,9 +12,9 @@ class DrinkViewHolder(
 
     fun bindDrink(drink: Drink) {
 
-        hotAndColdBinding.cover.setImageResource(drink.cover)
-        hotAndColdBinding.title.text = drink.title
-        hotAndColdBinding.author.text = drink.author
+        hotAndColdBinding.coverItem.setImageResource(drink.cover)
+        hotAndColdBinding.titleItem.text = drink.title
+        hotAndColdBinding.authorItem.text = drink.author
 
         hotAndColdBinding.cardView.setOnClickListener {
             drinkClickListener.onClick(drink)

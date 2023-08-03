@@ -25,15 +25,15 @@
             android:padding="8dp">
 
             <ImageView
-                android:id="@+id/cover"
+                android:id="@+id/coverItem"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:adjustViewBounds="true"
-                android:contentDescription="@string/cover"
+
                 android:src="@drawable/foto9" />
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/titleItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -44,7 +44,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/author"
+                android:id="@+id/authorItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"

@@ -24,7 +24,7 @@ class HelloFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_hello,container,false)
 
-        val delayMillis = 3000L
+        val delayMillis = 2000L
         Handler(Looper.getMainLooper()).postDelayed({
 
             (activity as? MainActivity)?.navigateToNextFragment()
