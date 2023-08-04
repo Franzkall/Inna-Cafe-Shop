@@ -41,7 +41,7 @@ class MoneyFragment : Fragment() {
         viewModel = ViewModelProvider(this)[MoneyFragmentViewModel::class.java]
 
         adapter = DrinkItemsAdapter()
-        val recyclerView: RecyclerView = binding.recyclerView
+        val recyclerView: RecyclerView = binding.recyclerView2
         recyclerView.adapter = adapter
 
         viewModel.drinksList.observe(viewLifecycleOwner, Observer { drinks ->
