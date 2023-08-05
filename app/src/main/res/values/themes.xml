@@ -1,3 +1,4 @@
+<!-- styles.xml -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.AbschlussAufgabe" parent="Theme.Material3.DayNight.NoActionBar">
@@ -7,4 +8,12 @@
     </style>
 
     <style name="Theme.AbschlussAufgabe" parent="Base.Theme.AbschlussAufgabe" />
+
+    <!-- Theme für den Splash-Screen -->
+    <style name="AppTheme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Hier setzen Sie die gewünschte Farbe als Hintergrund -->
+        <item name="android:windowBackground">@color/material_grey_500</item>
+        <!-- Oder Sie können ein Bild als Hintergrund verwenden -->
+        <!-- <item name="android:windowBackground">@drawable/anderes_hintergrundbild</item> -->
+    </style>
 </resources>
