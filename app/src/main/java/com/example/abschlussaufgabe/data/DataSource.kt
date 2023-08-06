@@ -11,10 +11,13 @@ class DataSource {
     fun loadImages(): List<Image> {
 
         return listOf(
-        Image(R.drawable.tu),
-        Image(R.drawable.one),
+        Image(R.drawable.nuovo),
+        Image(R.drawable.nuovo2),
+        Image(R.drawable.nuovo3),
+        Image(R.drawable.nuovo4),
+        Image(R.drawable.nuovo6),
         Image(R.drawable.two),
-        Image(R.drawable.inside),
+        Image(R.drawable.lavazza),
         Image(R.drawable.bild2),
         Image(R.drawable.new_logo),
         Image(R.drawable.lavazza)
