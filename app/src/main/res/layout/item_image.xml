@@ -14,23 +14,22 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="15dp"/>
+            android:layout_height="250dp"
+        app:cardCornerRadius="15dp">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:padding="8dp"
-            android:layout_height="200dp"
+            android:layout_height="match_parent"
             android:scaleType="centerCrop"
             tools:srcCompat="@drawable/tu" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
+    </androidx.cardview.widget.CardView>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
 
+</LinearLayout>
 
-    </LinearLayout>
-
-</layout>
+    </layout>

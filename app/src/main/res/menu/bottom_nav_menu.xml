@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/casaFragment"
-        android:icon="@drawable/baseline_home_24"
-        android:title="Home" />
+        android:icon="@drawable/tetto"
+        android:title="@string/home" />
 
     <item
         android:id="@+id/sortimentFragment"
-        android:icon="@drawable/baseline_search_24"
+        android:icon="@drawable/baseline_coffee_24"
         android:title="@string/specials"/>
 
     <item
         android:id="@+id/moneyFragment"
-        android:icon="@drawable/baseline_euro_24"
+        android:icon="@drawable/geld"
         android:title="@string/preisliste"/>
 
 </menu>
