@@ -23,6 +23,8 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+// Dieses Fragment zeigt eine Liste von Getränken mit Preisen an.
+
 class MoneyFragment : Fragment() {
     private val apiKey = BuildConfig.API_KEY
 
@@ -40,21 +42,26 @@ class MoneyFragment : Fragment() {
         val binding: FragmentMoneyBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_money, container, false)
 
+        // Initialisierung des ViewModels und Adapters.
         viewModel = ViewModelProvider(this)[MoneyFragmentViewModel::class.java]
-
         adapter = DrinkItemsAdapter()
+
+        // Der RecyclerView wird mit dem Adapter verbunden.
         val recyclerView: RecyclerView = binding.recyclerView2
         recyclerView.adapter = adapter
 
+        // Beobachtung der Getränkeliste im ViewModel, um den Adapter zu aktualisieren.
         viewModel.drinksList.observe(viewLifecycleOwner, Observer { drinks ->
             adapter.setDrinkItems(drinks)
         })
 
+        // Funktion zum Abrufen aller Getränke mit Preisen.
         getAllDrinks()
 
         return binding.root
     }
 
+    // Diese Funktion ruft alle Getränke mit Preisen über die API ab.
     private fun getAllDrinks() {
         val api = Retrofit.Builder()
             .baseUrl(BASEURL)

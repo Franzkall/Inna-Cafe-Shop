@@ -13,6 +13,7 @@ import com.example.abschlussaufgabe.data.model.Drink
 import com.example.abschlussaufgabe.databinding.FragmentSortimentBinding
 import com.example.abschlussaufgabe.repository.Repository
 
+// Dieses Fragment zeigt eine Auswahl von Getränken im Sortiment an.
 
 class SortimentFragment : Fragment() {
 
@@ -25,15 +26,18 @@ class SortimentFragment : Fragment() {
     ): View {
         binding = FragmentSortimentBinding.inflate(inflater, container, false)
 
+        // Der RecyclerView für das Sortiment wird konfiguriert.
         binding.rvSpecial.apply {
-            layoutManager = GridLayoutManager(requireContext(), 3)
+            layoutManager = GridLayoutManager(requireContext(), 3) // GridLayoutManager mit 3 Spalten.
             adapter = drinkAdapter
         }
 
         return binding.root
     }
 
+    // Diese Methode wird aufgerufen, wenn ein Getränk im Sortiment angeklickt wird.
     fun onClick(drink: Drink) {
+        // Eine Intent wird erstellt, um zur DetailActivity zu navigieren und die Getränk-ID zu übergeben.
         val intent = Intent(requireContext(), DetailActivity::class.java)
         intent.putExtra(DRINK_ID_EXTRA, drink.id)
         startActivity(intent)

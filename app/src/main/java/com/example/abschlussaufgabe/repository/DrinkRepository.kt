@@ -3,11 +3,12 @@ package com.example.abschlussaufgabe.repository
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.Drink
 
-
+// Diese singleton-objekt dient als repository für Getränkeinformationen.
 object Repository {
-    val drinkList = ArrayList<Drink>()
+    val drinkList = ArrayList<Drink>() // Eine liste von drink-objekten, die in repository gespeichert wird.
 
     init {
+        // Hier werden verschiedene Drink Objekte erstellt und zur drinklist hinzugefügt
         val drink1 = Drink(
             R.drawable.foto1,
             "Enrico",
