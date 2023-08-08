@@ -7,13 +7,7 @@ import com.example.abschlussaufgabe.data.model.DrinkItems
 import com.example.abschlussaufgabe.databinding.ItemDrinkBinding
 
 // Adapter-Klasse, die DrinkItems in einer RecyclerView anzeigt
-class DrinkItemsAdapter : RecyclerView.Adapter<DrinkItemsAdapter.ViewHolder>() {
-    private var drinkItems: List<DrinkItems> = mutableListOf()
-
-    // Setzt die Liste der DrinkItems für den Adapter
-    fun setDrinkItems(drinks: List<DrinkItems>) {
-        this.drinkItems = drinks
-    }
+class DrinkItemsAdapter(private val drinkItems: List<DrinkItems> ) : RecyclerView.Adapter<DrinkItemsAdapter.ViewHolder>() {
 
     // Erstellt eine neue ViewHolder-Instanz
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

@@ -10,8 +10,6 @@ import com.example.abschlussaufgabe.adapter.ImageAdapter
 import com.example.abschlussaufgabe.data.DataSource
 import com.example.abschlussaufgabe.databinding.FragmentCasaBinding
 
-// Dieses Fragment zeigt eine Liste von Bildern im RecyclerView an.
-
 class CasaFragment : Fragment() {
 
     private lateinit var binding: FragmentCasaBinding
@@ -21,7 +19,6 @@ class CasaFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Das Layout für dieses Fragment wird aufgeblasen und das Binding-Objekt initialisiert.
         binding = FragmentCasaBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -29,10 +26,8 @@ class CasaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Eine Liste von Bildern wird aus der DataSource geladen.
         val imageList = DataSource().loadImages()
 
-        // Der RecyclerView wird ein LayoutManager zugewiesen und ein Adapter mit der Bildliste.
         binding.imagesRecyclerview.layoutManager = LinearLayoutManager(requireContext())
         binding.imagesRecyclerview.adapter = ImageAdapter(imageList)
     }

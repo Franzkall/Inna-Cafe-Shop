@@ -1,86 +1,59 @@
 package com.example.abschlussaufgabe.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.abschlussaufgabe.BuildConfig
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.adapter.DrinkItemsAdapter
-import com.example.abschlussaufgabe.data.model.DrinkItems
 import com.example.abschlussaufgabe.databinding.FragmentMoneyBinding
-import com.example.abschlussaufgabe.json.MyApi
 import com.example.abschlussaufgabe.viewholder.MoneyFragmentViewModel
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 // Dieses Fragment zeigt eine Liste von Getränken mit Preisen an.
 
 class MoneyFragment : Fragment() {
     private val apiKey = BuildConfig.API_KEY
 
-    private val BASEURL = "https://script.google.com/macros/s/${apiKey}/exec/"
-
     private val TAG: String = "DRINK_LIST"
 
-    private lateinit var viewModel: MoneyFragmentViewModel
+    private val viewModel: MoneyFragmentViewModel by viewModels()
     private lateinit var adapter: DrinkItemsAdapter
+    private lateinit var binding: FragmentMoneyBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding: FragmentMoneyBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_money, container, false)
-
-        // Initialisierung des ViewModels und Adapters.
-        viewModel = ViewModelProvider(this)[MoneyFragmentViewModel::class.java]
-        adapter = DrinkItemsAdapter()
-
-        // Der RecyclerView wird mit dem Adapter verbunden.
-        val recyclerView: RecyclerView = binding.recyclerView2
-        recyclerView.adapter = adapter
-
-        // Beobachtung der Getränkeliste im ViewModel, um den Adapter zu aktualisieren.
-        viewModel.drinksList.observe(viewLifecycleOwner, Observer { drinks ->
-            adapter.setDrinkItems(drinks)
-        })
-
-        // Funktion zum Abrufen aller Getränke mit Preisen.
-        getAllDrinks()
+         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_money, container, false)
 
         return binding.root
     }
 
-    // Diese Funktion ruft alle Getränke mit Preisen über die API ab.
-    private fun getAllDrinks() {
-        val api = Retrofit.Builder()
-            .baseUrl(BASEURL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(MyApi::class.java)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Initialisierung des ViewModels und Adapters.
 
-        api.getDrinks().enqueue(object : Callback<List<DrinkItems>> {
-            override fun onResponse(call: Call<List<DrinkItems>>, response: Response<List<DrinkItems>>) {
-                if (response.isSuccessful) {
-                    response.body()?.let {
-                        viewModel.drinksList.value = it
-                    }
-                }
-            }
+        // Der RecyclerView wird mit dem Adapter verbunden.
+        val recyclerView: RecyclerView = binding.recyclerView2
 
-            override fun onFailure(call: Call<List<DrinkItems>>, t: Throwable) {
-                Log.i(TAG, "onFailure: ${t.message}")
-            }
+        // Beobachtung der Getränkeliste im ViewModel, um den Adapter zu aktualisieren.
+        viewModel.drinks.observe(viewLifecycleOwner, Observer { drinks ->
+
+            recyclerView.adapter = DrinkItemsAdapter(drinks)
         })
+
+
     }
-}
+
+
+
+
+
+    }
+
