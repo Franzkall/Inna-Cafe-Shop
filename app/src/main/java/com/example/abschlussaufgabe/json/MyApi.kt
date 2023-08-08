@@ -1,11 +1,13 @@
 package com.example.abschlussaufgabe.json
 
+import com.example.abschlussaufgabe.BuildConfig
 import com.example.abschlussaufgabe.data.model.GoogleSheetResponce
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 // Diese Schnittstelle definiert eine API zum Abrufen von Getränkeinformationen.
 
@@ -23,8 +25,8 @@ private val retrofit = Retrofit.Builder()
 interface MyApiService {
 
     // Diese Methode verwendet die HTTP GET-Methode, um eine Liste von Getränken abzurufen.
-    @GET("echo?user_content_key=4S3cQ1QOR3lo2ODJNlMTNHVwk9hkd5oCqiUILRXpYvYbrEtypGNpVuGzSOPaSwck64kXqtpo98J0WRRmefCDzS3_AMx0qcnvm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnDWBRZUf39akLhqqqc71WsbIpVxFHpz6yHydJnKTQpB5p-vRjTY41fhHkCCfLxNbfthV7eEZPXvaEQqiaRbmCKFDWh8xqhi_Ig&lib=MMaZo9b1iaA3ZFg8Nd9XJ6C-41kuCiUbs")
-   suspend fun getDrinks(): GoogleSheetResponce
+    @GET("echo")
+   suspend fun getDrinks(@Query("user_content_key") apiKey: String, @Query("lib") lib: String = "MMaZo9b1iaA3ZFg8Nd9XJ6C-41kuCiUbs" ): GoogleSheetResponce
 }
 
 object MyApi {
