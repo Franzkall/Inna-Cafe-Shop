@@ -18,12 +18,11 @@ import com.example.abschlussaufgabe.viewholder.MoneyFragmentViewModel
 // Dieses Fragment zeigt eine Liste von Getränken mit Preisen an.
 
 class MoneyFragment : Fragment() {
-    private val apiKey = BuildConfig.API_KEY
 
     private val TAG: String = "DRINK_LIST"
 
     private val viewModel: MoneyFragmentViewModel by viewModels()
-    private lateinit var adapter: DrinkItemsAdapter
+
     private lateinit var binding: FragmentMoneyBinding
 
     override fun onCreateView(
@@ -50,10 +49,6 @@ class MoneyFragment : Fragment() {
 
 
     }
-
-
-
-
 
     }
 
