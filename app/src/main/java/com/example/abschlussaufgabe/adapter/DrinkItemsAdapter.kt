@@ -13,7 +13,7 @@ class DrinkItemsAdapter : RecyclerView.Adapter<DrinkItemsAdapter.ViewHolder>() {
         this.drinkItems = drinks
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DrinkItemsAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = ItemDrinkBinding.inflate(inflater, parent, false)
         return ViewHolder(binding)
