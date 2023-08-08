@@ -1,4 +1,4 @@
-package com.example.abschlussaufgabe
+package com.example.abschlussaufgabe.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
+import com.example.abschlussaufgabe.BuildConfig
+import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.adapter.DrinkItemsAdapter
 import com.example.abschlussaufgabe.data.model.DrinkItems
 import com.example.abschlussaufgabe.databinding.FragmentMoneyBinding

@@ -6,7 +6,7 @@
     app:startDestination="@id/casaFragment">
     <fragment
         android:id="@+id/casaFragment"
-        android:name="com.example.abschlussaufgabe.CasaFragment"
+        android:name="com.example.abschlussaufgabe.ui.CasaFragment"
         tools:layout="@layout/fragment_casa"
         android:label="CasaFragment" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/sortimentFragment"
-        android:name="com.example.abschlussaufgabe.SortimentFragment"
+        android:name="com.example.abschlussaufgabe.ui.SortimentFragment"
         tools:layout="@layout/fragment_sortiment"
         android:label="SortimentFragment" >
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/moneyFragment"
-        android:name="com.example.abschlussaufgabe.MoneyFragment"
+        android:name="com.example.abschlussaufgabe.ui.MoneyFragment"
         tools:layout="@layout/fragment_money"
         android:label="MoneyFragment" >
         <action

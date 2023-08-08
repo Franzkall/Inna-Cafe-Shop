@@ -1,6 +1,6 @@
 package com.example.abschlussaufgabe.adapter
 
-import com.example.abschlussaufgabe.SortimentFragment
+import com.example.abschlussaufgabe.ui.SortimentFragment
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

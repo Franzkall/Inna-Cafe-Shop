@@ -1,4 +1,4 @@
-package com.example.abschlussaufgabe
+package com.example.abschlussaufgabe.ui
 
 import android.content.Intent
 import android.os.Bundle

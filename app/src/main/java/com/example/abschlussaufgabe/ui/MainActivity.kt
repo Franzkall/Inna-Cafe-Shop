@@ -1,4 +1,4 @@
-package com.example.abschlussaufgabe
+package com.example.abschlussaufgabe.ui
 
 
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
+import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.ActivityMainBinding
 
 
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
 
 

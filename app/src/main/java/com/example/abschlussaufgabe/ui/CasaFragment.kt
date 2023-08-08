@@ -1,4 +1,4 @@
-package com.example.abschlussaufgabe
+package com.example.abschlussaufgabe.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater

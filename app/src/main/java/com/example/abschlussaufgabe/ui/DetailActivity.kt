@@ -1,4 +1,4 @@
-package com.example.abschlussaufgabe
+package com.example.abschlussaufgabe.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
