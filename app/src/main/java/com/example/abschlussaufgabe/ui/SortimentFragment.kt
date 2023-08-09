@@ -2,6 +2,7 @@ package com.example.abschlussaufgabe.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +13,7 @@ import com.example.abschlussaufgabe.data.model.DRINK_ID_EXTRA
 import com.example.abschlussaufgabe.data.model.Drink
 import com.example.abschlussaufgabe.databinding.FragmentSortimentBinding
 import com.example.abschlussaufgabe.repository.Repository
-
+// Hot_and_Cold
 // Dieses Fragment zeigt eine Auswahl von Getränken im Sortiment an.
 
 class SortimentFragment : Fragment() {
@@ -37,6 +38,7 @@ class SortimentFragment : Fragment() {
 
     // Diese Methode wird aufgerufen, wenn ein Getränk im Sortiment angeklickt wird.
     fun onClick(drink: Drink) {
+        Log.e("Sortiment","${drink.id}")
         // Eine Intent wird erstellt, um zur DetailActivity zu navigieren und die Getränk-ID zu übergeben.
         val intent = Intent(requireContext(), DetailActivity::class.java)
         intent.putExtra(DRINK_ID_EXTRA, drink.id)

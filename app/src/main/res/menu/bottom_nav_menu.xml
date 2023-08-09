@@ -4,16 +4,19 @@
     <item
         android:id="@+id/casaFragment"
         android:icon="@drawable/baseline_home_24"
+        android:iconTint="@color/white"
         android:title="@string/home" />
 
     <item
         android:id="@+id/sortimentFragment"
         android:icon="@drawable/baseline_coffee_24"
+        android:iconTint="@color/white"
         android:title="@string/specials"/>
 
     <item
         android:id="@+id/moneyFragment"
         android:icon="@drawable/baseline_euro_24"
+        android:iconTint="@color/white"
         android:title="@string/preisliste"/>
 
 </menu>

@@ -1,15 +1,16 @@
 package com.example.abschlussaufgabe.adapter
 
+import android.util.Log
 import com.example.abschlussaufgabe.ui.SortimentFragment
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.abschlussaufgabe.data.model.Drink
 import com.example.abschlussaufgabe.databinding.HotAndColdBinding
-
+// Hot_and_Cold
 // Adapter-Klasse, die Drinks in einer RecyclerView anzeigt
 class DrinkAdapter(
-    private val drinks: List<Drink>,                 // Liste der anzuzeigenden Drinks
+    private val drinks: MutableList<Drink>,                 // Liste der anzuzeigenden Drinks
     private val drinkClickListener: SortimentFragment // Listener für Klick-Ereignisse auf Drinks
 ) : RecyclerView.Adapter<DrinkAdapter.DrinkViewHolder>() {
 
@@ -39,6 +40,8 @@ class DrinkAdapter(
 
             // Fügt einen Klick-Listener zum CardView hinzu, um auf Drink-Klicks zu reagieren
             binding.cardView.setOnClickListener {
+
+
                 drinkClickListener.onClick(drink) // Ruft die Methode auf, wenn ein Drink geklickt wird
             }
         }
