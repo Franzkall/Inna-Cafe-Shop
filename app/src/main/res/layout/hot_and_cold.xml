@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:backgroundTint="#FFE0B2"
+        android:backgroundTint="@color/black"
         android:clickable="true"
         app:cardCornerRadius="15dp"
         app:cardElevation="7dp"
@@ -37,9 +37,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:lines="2"
+                android:lines="1"
                 android:text="@string/espresso_italiano"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -50,7 +50,7 @@
                 android:gravity="center"
                 android:lines="1"
                 android:text="@string/numero_1"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 

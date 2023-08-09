@@ -61,7 +61,7 @@
             android:gravity="center"
             android:text="@string/wo_diese_art_der_kaffeezubereitung_um_1900_in_mailand_aufkam"
             android:textColor="@color/black"
-            android:textSize="12sp"
+            android:textSize="21sp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/author"
             app:layout_constraintStart_toStartOf="parent"
