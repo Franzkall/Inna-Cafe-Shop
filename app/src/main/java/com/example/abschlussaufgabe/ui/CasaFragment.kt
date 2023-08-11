@@ -37,4 +37,3 @@ class CasaFragment : Fragment() {
         binding.imagesRecyclerview.adapter = ImageAdapter(imageList)
     }
 }
-//Danke Benjamin
