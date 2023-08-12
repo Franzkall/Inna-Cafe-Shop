@@ -20,7 +20,7 @@
         android:title="@string/preisliste"/>
 
     <item
-        android:id="@+id/socialFragment"
+        android:id="@+id/mediaFragment"
         android:icon="@drawable/baseline_mood_24"
         android:iconTint="@color/white"
         android:title="@string/socialmedia"/>

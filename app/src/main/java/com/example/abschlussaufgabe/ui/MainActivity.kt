@@ -31,8 +31,5 @@ class MainActivity : AppCompatActivity() {
         setupWithNavController(bottomNavigationBar, navController)
     }
 
-    // Diese Methode navigiert zum nächsten Fragment (CasaFragment).
-    fun navigateToNextFragment() {
-        navController.navigate(R.id.casaFragment)
-    }
+
 }

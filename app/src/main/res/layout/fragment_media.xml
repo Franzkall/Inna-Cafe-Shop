@@ -8,78 +8,48 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         tools:context=".ui.MediaFragment">
 
+
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/social" />
+            app:srcCompat="@drawable/mi" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="81dp"
-            android:layout_height="89dp"
-            android:layout_marginStart="-60dp"
-            android:layout_marginTop="540dp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView"
-            app:srcCompat="@drawable/tik" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="106dp"
-            android:layout_height="88dp"
-            android:layout_marginStart="266dp"
-            android:layout_marginTop="540dp"
-            android:layout_marginEnd="40dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView"
-            app:srcCompat="@drawable/inst" />
 
         <Button
             android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="-80dp"
-            android:text="TikTok"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="120dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="-90dp"
+            android:layout_marginTop="491dp"
+            android:text="@string/tiktok"
+            android:backgroundTint="#FF5722"
             app:layout_constraintEnd_toStartOf="@+id/button2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="230dp"
-            android:text="InstaG"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="120dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="210dp"
+            android:layout_marginTop="491dp"
+            android:backgroundTint="#FF5722"
+            android:text="@string/instagram"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="136dp"
-            android:text="Social Media"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

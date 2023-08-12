@@ -40,8 +40,8 @@
     <fragment
         android:id="@+id/mediaFragment"
         android:name="com.example.abschlussaufgabe.ui.MediaFragment"
-        android:label="fragment_media"
-        tools:layout="@layout/fragment_media" >
+        tools:layout="@layout/fragment_media"
+        android:label="MediaFragment" >
         <action
             android:id="@+id/action_mediaFragment_to_casaFragment"
             app:destination="@id/casaFragment" />

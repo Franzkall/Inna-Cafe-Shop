@@ -30,6 +30,10 @@
     <string name="home">Home</string>
     <string name="Social" />
     <string name="socialmedia">Socialmedia</string>
+    <string name="tiktok">TikTok</string>
+    <string name="instag">InstaG</string>
+    <string name="social_media">Social Media</string>
+    <string name="instagram">Instagram</string>
 
 
 </resources>
