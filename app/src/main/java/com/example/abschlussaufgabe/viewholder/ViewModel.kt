@@ -20,7 +20,7 @@ class MoneyFragmentViewModel : ViewModel() {
        loadDrinks()
     }
 
-    fun loadDrinks() {
+    private fun loadDrinks() {
         viewModelScope.launch {
             repository.getDrinks()
         }
