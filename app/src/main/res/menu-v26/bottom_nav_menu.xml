@@ -25,4 +25,10 @@
         android:iconTint="@color/white"
         android:title="@string/socialmedia"/>
 
+    <item
+        android:id="@+id/viewFragment"
+        android:icon="@drawable/baseline_preview_24"
+        android:iconTint="@color/white"
+        android:title="View"/>
+
 </menu>

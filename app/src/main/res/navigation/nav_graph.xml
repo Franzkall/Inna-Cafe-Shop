@@ -45,6 +45,18 @@
         <action
             android:id="@+id/action_mediaFragment_to_casaFragment"
             app:destination="@id/casaFragment" />
+        <action
+            android:id="@+id/action_mediaFragment_to_viewFragment2"
+            app:destination="@id/viewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewFragment"
+        android:name="com.example.abschlussaufgabe.ui.ViewFragment"
+        tools:layout="@layout/fragment_view"
+        android:label="ViewFragment" >
+        <action
+            android:id="@+id/action_viewFragment2_to_sortimentFragment"
+            app:destination="@id/casaFragment" />
     </fragment>
 </navigation>
 
