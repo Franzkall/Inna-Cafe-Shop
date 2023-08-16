@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.MoneyFragment"
-        android:background="@drawable/alfredo">
+        android:background="@drawable/psl">
 
 
         <androidx.recyclerview.widget.RecyclerView

@@ -3,6 +3,7 @@ package com.example.abschlussaufgabe.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.navigation.findNavController
 import com.example.abschlussaufgabe.data.model.DRINK_ID_EXTRA
 import com.example.abschlussaufgabe.data.model.Drink
 import com.example.abschlussaufgabe.databinding.ActivityDetailBinding
@@ -20,6 +21,10 @@ class DetailActivity : AppCompatActivity() {
         // Das Layout für die Aktivität wird aufgeblasen und das Binding-Objekt initialisiert.
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.ivArrow.setOnClickListener {
+            binding.ivArrow.findNavController().navigateUp()
+        }
 
         // Die ID des ausgewählten Getränks wird aus den Intent-Extras gelesen.
         val drinkId = intent.getIntExtra(DRINK_ID_EXTRA,1)

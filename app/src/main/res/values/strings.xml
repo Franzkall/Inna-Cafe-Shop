@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">AbschlussAufgabe</string>
 
+    //Toolbar Strings
+    <string name="toolbar_welcome">Willkommen</string>
+    <string name="toolbar_specials">Specials</string>
+    <string name="price_list">Preisliste</string>
+    <string name="social">Socials</string>
+    <string name="panorama_blick">Panoramablick</string>
+
 
     <string name="drinks">Drinks</string>
     <string name="smoothies">Smoothies</string>

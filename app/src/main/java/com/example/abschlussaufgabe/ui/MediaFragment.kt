@@ -33,6 +33,9 @@ class MediaFragment : Fragment() {
         }
         binding.button2.setOnClickListener {
             openUrl("https://instagram.com/lavazza_cafe_shop_moers")
+
+            val activity: MainActivity = requireActivity() as MainActivity
+            activity.toolbarTitle.text = "Panoramic"
         }
     }
 
