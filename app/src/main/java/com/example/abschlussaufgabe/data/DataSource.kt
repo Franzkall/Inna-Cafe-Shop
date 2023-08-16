@@ -14,6 +14,8 @@ class DataSource {
         Image(R.drawable.nuovo3),
         Image(R.drawable.shakes),
         Image(R.drawable.nuovo6),
+        Image(R.drawable.gg1),
+        Image(R.drawable.gg2),
         Image(R.drawable.two),
         Image(R.drawable.bild2),
         Image(R.drawable.new_logo),

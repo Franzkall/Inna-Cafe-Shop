@@ -23,6 +23,10 @@ class ViewFragment : Fragment() {
         val binding = FragmentViewBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        val activity: MainActivity = requireActivity() as MainActivity
+        activity.toolbarTitle.text = "Panoramic"
+
+
         model.getCityData().observe(viewLifecycleOwner, Observer { city ->
             binding.cityImage.setImageDrawable(
                 ResourcesCompat.getDrawable(resources, city.img, requireContext().theme)

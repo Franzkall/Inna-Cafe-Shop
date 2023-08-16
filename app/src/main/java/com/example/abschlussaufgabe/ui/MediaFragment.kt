@@ -28,14 +28,16 @@ class MediaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val activity: MainActivity = requireActivity() as MainActivity
+        activity.toolbarTitle.text = "Socials"
+
         binding.button.setOnClickListener {
             openUrl("https://www.tiktok.com/@lavazza_cafe_shop_moers")
         }
         binding.button2.setOnClickListener {
             openUrl("https://instagram.com/lavazza_cafe_shop_moers")
 
-            val activity: MainActivity = requireActivity() as MainActivity
-            activity.toolbarTitle.text = "Panoramic"
+
         }
     }
 
