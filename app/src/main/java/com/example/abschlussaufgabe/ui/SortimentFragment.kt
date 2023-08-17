@@ -49,11 +49,11 @@ class SortimentFragment : Fragment() {
     ): View {
         binding = FragmentSortimentBinding.inflate(inflater, container, false)
 
-        // Toolbar-Titel wird aktualisiert
+        // Aktualisiere den Toolbar-Titel auf "Specials"
         val activity =  requireActivity() as MainActivity
         activity.toolbarTitle.text = "Specials"
 
-        // Der RecyclerView für das Sortiment wird konfiguriert.
+        // Konfiguriere den RecyclerView für das Sortiment
         binding.rvSpecial.apply {
             layoutManager = GridLayoutManager(requireContext(), 3) // GridLayoutManager mit 3 Spalten.
             adapter = drinkAdapter
@@ -66,10 +66,16 @@ class SortimentFragment : Fragment() {
      * Diese Methode wird aufgerufen, wenn ein Getränk im Sortiment angeklickt wird.
      */
     fun onClick(drink: Drink) {
-        Log.e("Sortiment","${drink.id}")
-        // Eine Intent wird erstellt, um zur DetailActivity zu navigieren und die Getränk-ID zu übergeben.
-        val intent = Intent(requireContext(), DetailActivity::class.java)
-        intent.putExtra(DRINK_ID_EXTRA, drink.id)
-        startActivity(intent)
+        try {
+            Log.e("Sortiment", "${drink.id}")
+
+            // Eine Intent wird erstellt, um zur DetailActivity zu navigieren und die Getränk-ID zu übergeben.
+            val intent = Intent(requireContext(), DetailActivity::class.java)
+            intent.putExtra(DRINK_ID_EXTRA, drink.id)
+            startActivity(intent)
+        } catch (e: Exception) {
+            // Zeige einen Fehler im Logcat an, wenn eine Ausnahme auftritt.
+            Log.e("Sortiment", "Fehler beim Klicken auf Getränk: ${e.message}")
+        }
     }
 }
