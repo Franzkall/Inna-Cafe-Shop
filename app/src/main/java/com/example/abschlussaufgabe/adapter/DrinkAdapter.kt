@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.abschlussaufgabe.data.model.Drink
 import com.example.abschlussaufgabe.databinding.HotAndColdBinding
 import com.example.abschlussaufgabe.ui.SortimentFragment
-
+// SortimentFragment
 /**
  * Adapter-Klasse, die Drinks in einer RecyclerView anzeigt.
  */

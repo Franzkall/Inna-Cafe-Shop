@@ -14,7 +14,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
-            android:layout_height="200dp"
+            android:layout_height="302dp"
             app:cardCornerRadius="15dp">
 
             <ImageView
@@ -28,7 +28,16 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="8dp" />
+            android:layout_height="1dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:text="Beispiel"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

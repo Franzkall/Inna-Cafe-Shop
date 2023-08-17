@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.abschlussaufgabe.json.MyApi
 import com.example.abschlussaufgabe.repository.ApiRepository
 import kotlinx.coroutines.launch
-
+//MoneyFragment
 /**
  * Dieses ViewModel dient dazu, eine Liste von Getränken mit Preisen für das MoneyFragment bereitzustellen.
  */

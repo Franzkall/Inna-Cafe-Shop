@@ -7,7 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.abschlussaufgabe.data.model.City
 import com.example.abschlussaufgabe.data.model.CityDataProvider
-
+//ViewFragment
 /**
  * ViewModel für die Anzeige von ständig wechselnden Städteinformationen.
  */

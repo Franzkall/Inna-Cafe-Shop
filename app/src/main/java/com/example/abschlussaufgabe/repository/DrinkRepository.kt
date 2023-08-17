@@ -2,7 +2,7 @@ package com.example.abschlussaufgabe.repository
 
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.Drink
-// Hot_and_Cold
+// FragmentSortiment
 
 /**
  * Singleton-Objekt, das als Repository für Getränkeinformationen dient.
