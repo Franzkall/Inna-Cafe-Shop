@@ -3,7 +3,10 @@ package com.example.abschlussaufgabe.repository
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.Drink
 // Hot_and_Cold
-// Diese singleton-objekt dient als repository für Getränkeinformationen.
+
+/**
+ * Singleton-Objekt, das als Repository für Getränkeinformationen dient.
+ */
 object Repository {
     val drinkList = ArrayList<Drink>() // Eine liste von drink-objekten, die in repository gespeichert wird.
 

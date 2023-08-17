@@ -12,7 +12,9 @@ import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.FragmentViewBinding
 import com.example.abschlussaufgabe.viewmodel.CityViewModel
 
-
+/**
+ * Dieses Fragment zeigt Informationen über eine Stadt an.
+ */
 class ViewFragment : Fragment() {
     private val model: CityViewModel by viewModels()
 
@@ -26,7 +28,7 @@ class ViewFragment : Fragment() {
         val activity: MainActivity = requireActivity() as MainActivity
         activity.toolbarTitle.text = "Panoramic"
 
-
+        // Beobachtet die City-Daten im ViewModel, um die Ansicht zu aktualisieren.
         model.getCityData().observe(viewLifecycleOwner, Observer { city ->
             binding.cityImage.setImageDrawable(
                 ResourcesCompat.getDrawable(resources, city.img, requireContext().theme)
@@ -37,5 +39,4 @@ class ViewFragment : Fragment() {
 
         return view
     }
-
 }

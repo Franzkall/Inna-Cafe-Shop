@@ -8,8 +8,9 @@ import android.os.Looper
 import android.view.WindowManager
 import com.example.abschlussaufgabe.R
 
-// Diese Aktivität dient als Startbildschirm der Anwendung.
-
+/**
+ * Diese Aktivität dient als Startbildschirm der Anwendung.
+ */
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -14,43 +14,49 @@ import com.example.abschlussaufgabe.adapter.DrinkItemsAdapter
 import com.example.abschlussaufgabe.databinding.FragmentMoneyBinding
 import com.example.abschlussaufgabe.viewholder.MoneyFragmentViewModel
 
-// Dieses Fragment zeigt eine Liste von Getränken mit Preisen an.
-
+/**
+ * Dieses Fragment zeigt eine Liste von Getränken mit Preisen an.
+ */
 class MoneyFragment : Fragment() {
 
+    // Tag für Logging
     private val TAG: String = "DRINK_LIST"
 
+    // ViewModel für dieses Fragment
     private val viewModel: MoneyFragmentViewModel by viewModels()
 
+    // Binding-Objekt für das Fragment
     private lateinit var binding: FragmentMoneyBinding
 
+    /**
+     * Wird aufgerufen, um die View für das Fragment zu erstellen.
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_money, container, false)
-
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_money, container, false)
         return binding.root
     }
 
+    /**
+     * Wird aufgerufen, nachdem die View des Fragments erstellt wurde.
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         // Initialisierung des ViewModels und Adapters.
 
         // Der RecyclerView wird mit dem Adapter verbunden.
         val recyclerView: RecyclerView = binding.recyclerView2
 
+        // Toolbar-Titel wird aktualisiert
         val activity: MainActivity = requireActivity() as MainActivity
         activity.toolbarTitle.text = "Preisliste"
 
         // Beobachtung der Getränkeliste im ViewModel, um den Adapter zu aktualisieren.
         viewModel.drinks.observe(viewLifecycleOwner, Observer { drinks ->
-
             recyclerView.adapter = DrinkItemsAdapter(drinks)
         })
-
-
     }
-
-    }
-
+}
