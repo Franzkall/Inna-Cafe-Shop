@@ -8,15 +8,14 @@ import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.FragmentViewBinding
-import com.example.abschlussaufgabe.viewmodel.CityViewModel
+import com.example.abschlussaufgabe.viewmodel.PanoramicViewModel
 
 /**
- * Dieses Fragment zeigt Informationen über eine Stadt an.
+ * Dieses Fragment zeigt Informationen über eine Bild an.
  */
 class ViewFragment : Fragment() {
-    private val model: CityViewModel by viewModels()
+    private val model: PanoramicViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,8 +27,8 @@ class ViewFragment : Fragment() {
         val activity: MainActivity = requireActivity() as MainActivity
         activity.toolbarTitle.text = "Panoramic"
 
-        // Beobachtet die City-Daten im ViewModel, um die Ansicht zu aktualisieren.
-        model.getCityData().observe(viewLifecycleOwner, Observer { city ->
+        // Beobachtet die Picture-Daten im ViewModel, um die Ansicht zu aktualisieren.
+        model.getPictureData().observe(viewLifecycleOwner, Observer { city ->
             binding.cityImage.setImageDrawable(
                 ResourcesCompat.getDrawable(resources, city.img, requireContext().theme)
             )

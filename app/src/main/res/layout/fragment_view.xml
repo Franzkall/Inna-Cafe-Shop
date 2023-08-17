@@ -17,7 +17,7 @@
             android:id="@+id/cityImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/lz1"
+            app:srcCompat="@drawable/gs6"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
             app:layout_constraintStart_toStartOf="parent"
