@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/viewFragment"
+            android:icon="@drawable/baseline_preview_24"
+            android:title="Slide show"
+            android:checked="true"/>
+        <item
+            android:id="@+id/mediaFragment"
+            android:icon="@drawable/baseline_mood_24"
+            android:title="Social Media"
+            android:checked="true"/>
+        <item
+            android:id="@+id/rewards"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="LLL"
+            android:checked="true"/>
+    </group>
+</menu>

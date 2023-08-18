@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.ActivityMainBinding
 import com.example.abschlussaufgabe.util.ToolbarTextUpdater
@@ -29,10 +30,15 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
         // Das Layout der Aktivität wird durch Data Binding gesetzt.
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         toolbarTitle = binding.textView2
+        binding.fabMenu.setOnClickListener {
+            binding.drawer.open()
+        }
 
         // Der NavHostFragment und der zugehörige NavController werden initialisiert.
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
         navController = navHostFragment.navController
+
+        binding.navigationView.setupWithNavController(navController)
 
         // Die untere Navigationsleiste wird mit dem NavController verknüpft.
         val bottomNavigationBar = binding.bottomNavigationView
