@@ -7,7 +7,7 @@
         <item
             android:id="@+id/viewFragment"
             android:icon="@drawable/baseline_preview_24"
-            android:title="Slide show"
+            android:title="Fotogalerie"
             android:checked="true"/>
         <item
             android:id="@+id/mediaFragment"
@@ -17,7 +17,7 @@
         <item
             android:id="@+id/rewards"
             android:icon="@drawable/ic_launcher_foreground"
-            android:title="LLL"
+            android:title="LL"
             android:checked="true"/>
     </group>
 </menu>
