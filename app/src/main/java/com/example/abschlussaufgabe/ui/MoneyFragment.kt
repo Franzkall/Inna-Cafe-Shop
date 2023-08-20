@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ViewFlipper
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -18,9 +19,6 @@ import com.example.abschlussaufgabe.viewholder.MoneyFragmentViewModel
  * Dieses Fragment zeigt eine Liste von Getränken mit Preisen an.
  */
 class MoneyFragment : Fragment() {
-
-    // Tag für Logging
-    private val TAG: String = "DRINK_LIST"
 
     // ViewModel für dieses Fragment
     private val viewModel: MoneyFragmentViewModel by viewModels()
@@ -50,13 +48,23 @@ class MoneyFragment : Fragment() {
         // Der RecyclerView wird mit dem Adapter verbunden.
         val recyclerView: RecyclerView = binding.recyclerView2
 
+        val viewFlipper: ViewFlipper = binding.viewFlipper
+
         // Toolbar-Titel wird aktualisiert
         val activity: MainActivity = requireActivity() as MainActivity
         activity.toolbarTitle.text = "Preisliste"
 
         // Beobachtung der Getränkeliste im ViewModel, um den Adapter zu aktualisieren.
         viewModel.drinks.observe(viewLifecycleOwner, Observer { drinks ->
+            // Den ViewFlipper ausblenden, nachdem die Daten geladen wurden.
+            viewFlipper.displayedChild = 1
+
             recyclerView.adapter = DrinkItemsAdapter(drinks)
+
+            view.postDelayed({
+                viewFlipper.displayedChild = 1
+            }, 1000)
         })
+
     }
 }

@@ -27,9 +27,15 @@ class RewardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentRewardBinding.inflate(inflater, container, false)
+
+        val activity: MainActivity = requireActivity() as MainActivity
+        activity.toolbarTitle.text = "Scanner"
+
         setUpPermissions()
         codeScanner()
         return binding.root
+
+
     }
 
     private fun codeScanner() {
@@ -89,6 +95,7 @@ class RewardFragment : Fragment() {
         )
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
