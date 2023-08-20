@@ -10,6 +10,7 @@ import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.ActivityMainBinding
+import com.example.abschlussaufgabe.db.RefreshmentRepository
 import com.example.abschlussaufgabe.util.ToolbarTextUpdater
 
 /**
@@ -32,6 +33,11 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
         toolbarTitle = binding.textView2
         binding.fabMenu.setOnClickListener {
             binding.drawer.open()
+
+            val repository = RefreshmentRepository.getInstance(this)
+
+            repository.prepopulateDB()
+
         }
 
         // Der NavHostFragment und der zugehörige NavController werden initialisiert.
