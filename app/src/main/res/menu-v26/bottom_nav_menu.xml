@@ -9,6 +9,12 @@
         android:title="@string/home" />
 
     <item
+        android:id="@+id/rewardFragment"
+        android:icon="@drawable/baseline_photo_camera_24"
+        android:iconTint="@color/black"
+        android:title="Code scanner"/>
+
+    <item
         android:id="@+id/sortimentFragment"
         android:icon="@drawable/baseline_coffee_24"
         app:tint="@color/black"
