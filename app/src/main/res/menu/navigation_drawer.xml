@@ -15,9 +15,9 @@
             android:title="Social Media"
             android:checked="true"/>
         <item
-            android:id="@+id/rewards"
+            android:id="@+id/homeFragment"
             android:icon="@drawable/ic_launcher_foreground"
-            android:title="LL"
+            android:title="Anmeldung"
             android:checked="true"/>
     </group>
 </menu>
