@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "468043691721",
+    "project_id": "abschlussaufgabe-e4c94",
+    "storage_bucket": "abschlussaufgabe-e4c94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468043691721:android:edb02a46f637f7a0f77f18",
+        "android_client_info": {
+          "package_name": "com.example.abschlussaufgabe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468043691721-glsd7vf6a9caf8de0o46cpmq4j7ni02n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAozGXZnPmfjyLmdwyi-cnpBzlUYVojr0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468043691721-glsd7vf6a9caf8de0o46cpmq4j7ni02n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
