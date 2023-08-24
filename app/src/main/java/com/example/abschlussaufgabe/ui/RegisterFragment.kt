@@ -31,6 +31,9 @@ class RegisterFragment: Fragment() {
 
         binding.btBack.setOnClickListener {
             findNavController().navigate(R.id.loginFragment)
+
+            val activity: MainActivity = requireActivity() as MainActivity
+            activity.toolbarTitle.text = "Login"
         }
 
         binding.btRegister.setOnClickListener {

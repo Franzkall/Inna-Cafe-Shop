@@ -30,6 +30,9 @@ class HomeFragment: Fragment() {
 
         binding.btLogout.setOnClickListener {
             viewModel.logout()
+
+            val activity: MainActivity = requireActivity() as MainActivity
+            activity.toolbarTitle.text = "Angemeldet"
         }
 
         viewModel.currentUser.observe(viewLifecycleOwner) { user ->

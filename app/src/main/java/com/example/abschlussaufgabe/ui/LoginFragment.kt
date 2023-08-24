@@ -33,6 +33,10 @@ class LoginFragment: Fragment() {
 
         binding.btToRegister.setOnClickListener {
             findNavController().navigate(R.id.registerFragment)
+
+
+            val activity: MainActivity = requireActivity() as MainActivity
+            activity.toolbarTitle.text = "Registriere dich"
         }
 
         binding.btLogin.setOnClickListener {
