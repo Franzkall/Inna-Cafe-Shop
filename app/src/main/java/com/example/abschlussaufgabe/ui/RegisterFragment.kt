@@ -9,13 +9,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.abschlussaufgabe.R
+import com.example.abschlussaufgabe.data.model.User
 import com.example.abschlussaufgabe.databinding.FragmentRegisterBinding
 import com.example.abschlussaufgabe.viewmodel.AuthViewModel
+import com.example.abschlussaufgabe.viewmodel.FirestoreViewModel
 
 class RegisterFragment: Fragment() {
 
     private lateinit var binding: FragmentRegisterBinding
-    private val viewModel: AuthViewModel by activityViewModels()
+    private val authViewModel: AuthViewModel by activityViewModels()
+    private val storeViewModel: FirestoreViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,16 +43,22 @@ class RegisterFragment: Fragment() {
             val email: String = binding.tietEmail.text.toString()
             val password: String = binding.tietPass.text.toString()
             if (email != "" && password != "") {
-                viewModel.register(email, password)
+                authViewModel.register(email, password)
             } else {
                 Log.e("ERROR", "Empty field")
             }
 
         }
 
-        viewModel.currentUser.observe(viewLifecycleOwner) { user ->
-            if (user != null) {
-                findNavController().navigate(R.id.homeFragment)
+        authViewModel.currentUser.observe(viewLifecycleOwner) { firebaseUser ->
+            if (firebaseUser != null) {
+                val user = User(
+                    firebaseUser.uid,
+                    binding.tietEmail.text.toString(),
+                    binding.btRegister.text.toString()
+                )
+                storeViewModel.addNewUser(user)
+                findNavController().navigate(R.id.casaFragment)
             }
         }
 

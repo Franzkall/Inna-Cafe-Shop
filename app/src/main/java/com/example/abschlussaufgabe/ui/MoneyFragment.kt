@@ -48,7 +48,6 @@ class MoneyFragment : Fragment() {
         // Der RecyclerView wird mit dem Adapter verbunden.
         val recyclerView: RecyclerView = binding.recyclerView2
 
-        val viewFlipper: ViewFlipper = binding.viewFlipper
 
         // Toolbar-Titel wird aktualisiert
         val activity: MainActivity = requireActivity() as MainActivity
@@ -57,14 +56,8 @@ class MoneyFragment : Fragment() {
         // Beobachtung der Getränkeliste im ViewModel, um den Adapter zu aktualisieren.
         viewModel.drinks.observe(viewLifecycleOwner, Observer { drinks ->
             // Den ViewFlipper ausblenden, nachdem die Daten geladen wurden.
-            viewFlipper.displayedChild = 1
 
             recyclerView.adapter = DrinkItemsAdapter(drinks)
-
-            view.postDelayed({
-                viewFlipper.displayedChild = 1
-            }, 1000)
         })
-
     }
 }
