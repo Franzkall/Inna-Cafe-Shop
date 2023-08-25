@@ -31,19 +31,19 @@ class OnboardingFragment : Fragment() {
         onboardingItemAdapter = OnboardingItemAdapter(
             listOf(
                 OnboardingItem(
-                    onboardingImage = R.drawable.o1,
+                    onboardingImage = R.drawable.br1,
                     title = "Willkommen",
-                    description = "Platzhalter"
+                    description = "Danke, dass du unsere App benutzt. Ich helfe dir dabei, alle Funktionen zu nutzen."
                 ),
                 OnboardingItem(
-                    onboardingImage = R.drawable.o2,
-                    title = "Platzhalter",
-                    description = "Platzhalter"
+                    onboardingImage = R.drawable.br2,
+                    title = "Punkte sammeln",
+                    description = "Punkte sammeln leicht gemacht: Nutze der Qr-Code Scanner, um bei jedem Einkauf Punkte zu sammeln.Diese kannst du dann gegen dein Lieblingsgetränk eintauschen. Dafür einfach anmelden oder registrieren.Das Login findest du oben links-klicke dazu auf die drei Balken."
                 ),
                 OnboardingItem(
-                    onboardingImage = R.drawable.o3,
-                    title = "Platzhalter",
-                    description = "Platzhalter"
+                    onboardingImage = R.drawable.br3,
+                    title = "Erlebnisse",
+                    description = "Entdecke hier Bilder, Fakten, Events und viele andere faszinierende Funktionen. Wir hoffen, du hast viel spaß damit!"
                 )
             )
         )
