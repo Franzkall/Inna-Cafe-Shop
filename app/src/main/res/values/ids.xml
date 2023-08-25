@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <item name="textDescription" type="id">layout</item>
-    <item name="textTitle" type="id">layout</item>
-    <item name="imageOnboarding" type="id">layout</item>
-</resources>
