@@ -4,12 +4,12 @@
 //
 // For instance,
 //
-// In MainActivity.java:
+// In com.example.abschlussaufgabe.ui.MainActivity.java:
 //    static {
 //       System.loadLibrary("abschlussaufgabe");
 //    }
 //
-// Or, in MainActivity.kt:
+// Or, in com.example.abschlussaufgabe.ui.MainActivity.kt:
 //    companion object {
 //      init {
 //         System.loadLibrary("abschlussaufgabe")

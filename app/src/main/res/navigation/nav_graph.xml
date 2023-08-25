@@ -93,6 +93,15 @@
         tools:layout="@layout/fragment_register" >
 
     </fragment>
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.example.abschlussaufgabe.ui.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_casaFragment"
+            app:destination="@id/casaFragment" />
+    </fragment>
 
 </navigation>
 
