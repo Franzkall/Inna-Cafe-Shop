@@ -1,6 +1,8 @@
 package com.example.abschlussaufgabe.ui
 
 import android.os.Bundle
+import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
     lateinit var toolbarTitle: TextView
     private lateinit var binding: ActivityMainBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -29,6 +32,16 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
 
             val repository = RefreshmentRepository.getInstance(this)
             repository.prepopulateDB()
+           // Crashlytics
+            val crashButton = Button(this)
+            crashButton.text = "Test Crash"
+            crashButton.setOnClickListener {
+                throw RuntimeException("Test Crash") // Force a crash
+            }
+
+            addContentView(crashButton, ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT))
         }
 
         val navHostFragment =
@@ -67,4 +80,5 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
 
         return isFirstTime
     }
+
 }
