@@ -20,6 +20,10 @@ class CasaFragment : Fragment() {
 
     /**
      * Wird aufgerufen, wenn die View für das Fragment erstellt oder neu erstellt wird.
+     * @param inflater Der Inflater zum Aufblasen des Layouts
+     * @param container Die Elternansicht, in die das Fragment eingesetzt wird
+     * @param savedInstanceState Die gespeicherten Instanzdaten, wenn vorhanden
+     * @return Die aufgeblasene View für das Fragment
      */
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,6 +37,8 @@ class CasaFragment : Fragment() {
 
     /**
      * Wird aufgerufen, nachdem die View des Fragments erstellt wurde.
+     * @param view Die erstellte View für das Fragment
+     * @param savedInstanceState Die gespeicherten Instanzdaten, wenn vorhanden
      */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

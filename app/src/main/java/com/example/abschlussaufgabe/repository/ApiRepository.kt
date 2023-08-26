@@ -7,6 +7,8 @@ import com.example.abschlussaufgabe.BuildConfig
 import com.example.abschlussaufgabe.data.model.DrinkItems
 import com.example.abschlussaufgabe.json.MyApi
 
+// MoneyFragment
+
 /**
  * Repository-Klasse für die Kommunikation mit der API.
  */

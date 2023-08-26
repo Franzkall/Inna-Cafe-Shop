@@ -1,7 +1,13 @@
+
+/**
+ * Beispiel-Daten für Erfrischungsartikel.
+ */
+
 package com.example.abschlussaufgabe.exampledata
 
 import com.example.abschlussaufgabe.local.PriceListData
 
+// MoneyFragment (Inspektor - Modus)
 object ListData {
 
     val refreshment1 = PriceListData(

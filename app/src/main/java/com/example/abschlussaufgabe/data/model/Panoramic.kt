@@ -1,5 +1,6 @@
 package com.example.abschlussaufgabe.data.model
 
+// ViewFragment
 /**
  * Datenklasse für eine Bild.
  */

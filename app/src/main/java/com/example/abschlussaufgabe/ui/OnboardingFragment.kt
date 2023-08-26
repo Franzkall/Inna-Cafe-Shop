@@ -13,11 +13,17 @@ import com.example.abschlussaufgabe.adapter.OnboardingItemAdapter
 import com.example.abschlussaufgabe.data.model.OnboardingItem
 import com.google.android.material.button.MaterialButton
 
-
+/**
+ * Das Fragment für das Onboarding (Einführungs-)Bildschirm.
+ */
 class OnboardingFragment : Fragment() {
 
+    // Adapter für die Onboarding-Elemente
     private lateinit var onboardingItemAdapter: OnboardingItemAdapter
 
+    /**
+     * Wird aufgerufen, um die Ansicht für das Fragment zu erstellen.
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,7 +33,11 @@ class OnboardingFragment : Fragment() {
         return rootView
     }
 
+    /**
+     * Initialisiert die Onboarding-Elemente.
+     */
     private fun setOnboardingItems(rootView: View) {
+        // Onboarding-Elemente erstellen
         onboardingItemAdapter = OnboardingItemAdapter(
             listOf(
                 OnboardingItem(
@@ -38,12 +48,12 @@ class OnboardingFragment : Fragment() {
                 OnboardingItem(
                     onboardingImage = R.drawable.br2,
                     title = "Punkte sammeln",
-                    description = "Punkte sammeln leicht gemacht: Nutze der Qr-Code Scanner, um bei jedem Einkauf Punkte zu sammeln.Diese kannst du dann gegen dein Lieblingsgetränk eintauschen. Dafür einfach anmelden oder registrieren.Das Login findest du oben links-klicke dazu auf die drei Balken."
+                    description = "Punkte sammeln leicht gemacht: Nutze den Qr-Code Scanner, um bei jedem Einkauf Punkte zu sammeln. Diese kannst du dann gegen dein Lieblingsgetränk eintauschen. Dafür einfach anmelden oder registrieren. Das Login findest du oben links - klicke dazu auf die drei Balken."
                 ),
                 OnboardingItem(
                     onboardingImage = R.drawable.br3,
                     title = "Erlebnisse",
-                    description = "Entdecke hier Bilder, Fakten, Events und viele andere faszinierende Funktionen. Wir hoffen, du hast viel spaß damit!"
+                    description = "Entdecke hier Bilder, Fakten, Events und viele andere faszinierende Funktionen. Wir hoffen, du hast viel Spaß damit!"
                 )
             )
         )
@@ -51,6 +61,7 @@ class OnboardingFragment : Fragment() {
         val onboardingViewPager = rootView.findViewById<ViewPager2>(R.id.onboardingViewPager)
         onboardingViewPager.adapter = onboardingItemAdapter
 
+        // Klick-Listener für Weiter-Button
         rootView.findViewById<ImageView>(R.id.imageNext).setOnClickListener {
             if (onboardingViewPager.currentItem + 1 < onboardingItemAdapter.itemCount) {
                 onboardingViewPager.currentItem += 1
@@ -59,20 +70,23 @@ class OnboardingFragment : Fragment() {
             }
         }
 
+        // Klick-Listener für Überspringen-Text
         rootView.findViewById<TextView>(R.id.textSkip).setOnClickListener {
             navigateToCasaFragment()
         }
 
+        // Klick-Listener für Get Started Button
         rootView.findViewById<MaterialButton>(R.id.buttonGetStarted).setOnClickListener {
             navigateToCasaFragment()
         }
     }
 
+    /**
+     * Navigiert zum CasaFragment.
+     */
     private fun navigateToCasaFragment() {
         val fragmentTransaction = parentFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fragment_container, CasaFragment())
         fragmentTransaction.commit()
     }
-
 }
-

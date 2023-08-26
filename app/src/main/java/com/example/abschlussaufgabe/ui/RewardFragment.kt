@@ -16,11 +16,20 @@ import com.budiyev.android.codescanner.ErrorCallback
 import com.budiyev.android.codescanner.ScanMode
 import com.example.abschlussaufgabe.databinding.FragmentRewardBinding
 
+/**
+ * Das Fragment für den Belohnungs-Scanner.
+ */
 class RewardFragment : Fragment() {
 
+    // Binding-Objekt für das Fragment
     private lateinit var binding: FragmentRewardBinding
+
+    // CodeScanner-Objekt für das Scannen von QR-Codes
     private lateinit var codeScanner: CodeScanner
 
+    /**
+     * Wird aufgerufen, um die Ansicht für das Fragment zu erstellen.
+     */
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,16 +37,21 @@ class RewardFragment : Fragment() {
     ): View? {
         binding = FragmentRewardBinding.inflate(inflater, container, false)
 
+        // Setzt den Titel der Toolbar in der MainActivity
         val activity: MainActivity = requireActivity() as MainActivity
         activity.toolbarTitle.text = "Scanner"
 
+        // Überprüft und fordert ggf. Berechtigungen an
         setUpPermissions()
+
+        // Initialisiert den CodeScanner
         codeScanner()
         return binding.root
-
-
     }
 
+    /**
+     * Initialisiert den CodeScanner für das Scannen von QR-Codes.
+     */
     private fun codeScanner() {
         codeScanner = CodeScanner(requireContext(), binding.scannerView)
 
@@ -50,11 +64,13 @@ class RewardFragment : Fragment() {
             isAutoFocusEnabled = true
             isFlashEnabled = false
 
+            // Callback für das Entschlüsseln des QR-Codes
             decodeCallback = DecodeCallback {
                 requireActivity().runOnUiThread {
                     binding.tvText.text = it.text
                 }
             }
+            // Callback für Fehler beim Initialisieren der Kamera
             errorCallback = ErrorCallback {
                 requireActivity().runOnUiThread {
                     Log.e("Main", "Camera initialization errors: ${it.message}")
@@ -62,21 +78,31 @@ class RewardFragment : Fragment() {
             }
         }
 
+        // Klick-Listener für den Scanner-Bereich
         binding.scannerView.setOnClickListener {
             codeScanner.startPreview()
         }
     }
 
+    /**
+     * Wird aufgerufen, wenn das Fragment wieder in den Vordergrund kommt.
+     */
     override fun onResume() {
         super.onResume()
         codeScanner.startPreview()
     }
 
+    /**
+     * Wird aufgerufen, wenn das Fragment pausiert wird.
+     */
     override fun onPause() {
         codeScanner.releaseResources()
         super.onPause()
     }
 
+    /**
+     * Überprüft und fordert die Berechtigungen für die Kamera an.
+     */
     private fun setUpPermissions() {
         val permission = ContextCompat.checkSelfPermission(
             requireContext(),
@@ -88,6 +114,9 @@ class RewardFragment : Fragment() {
         }
     }
 
+    /**
+     * Fordert die Berechtigung für die Kamera an.
+     */
     private fun makeRequest() {
         requestPermissions(
             arrayOf(android.Manifest.permission.CAMERA),
@@ -95,6 +124,9 @@ class RewardFragment : Fragment() {
         )
     }
 
+    /**
+     * Wird aufgerufen, wenn eine Berechtigungsanfrage abgeschlossen ist.
+     */
     @Deprecated("Deprecated in Java")
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -110,7 +142,7 @@ class RewardFragment : Fragment() {
                         Toast.LENGTH_SHORT
                     ).show()
                 } else {
-                    // Successful
+                    // Berechtigung erfolgreich
                 }
             }
         }

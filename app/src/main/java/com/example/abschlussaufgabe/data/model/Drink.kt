@@ -1,5 +1,5 @@
 package com.example.abschlussaufgabe.data.model
-
+//SortimentFragment
 /**
  * Datenklasse, die Informationen über einen Drink speichert.
  */

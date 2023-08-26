@@ -2,6 +2,8 @@ package com.example.abschlussaufgabe.data.model
 
 import com.example.abschlussaufgabe.R
 
+// ViewFragment
+
 /**
  * Klasse, die Bildertedaten bereitstellt.
  */

@@ -28,6 +28,7 @@ class DetailActivity : AppCompatActivity() {
 
         // Klick-Listener für den Pfeil-Button zum Zurücknavigieren
         binding.ivArrow.setOnClickListener {
+            // Mit dem Navigation Controller zurücknavigieren
             binding.ivArrow.findNavController().navigateUp()
         }
 
@@ -36,7 +37,7 @@ class DetailActivity : AppCompatActivity() {
 
         // Das entsprechende Getränk wird anhand der ID aus der Liste geladen.
         val drink = drinkFromId(drinkId)
-        Log.e("Detail", "${drink}")
+        Log.e("Detail", "Ausgewähltes Getränk: $drink")
         if (drink != null) {
             // Die Detailansicht wird mit Informationen über das Getränk aktualisiert.
             binding.cover.setImageResource(drink.cover)
@@ -44,9 +45,10 @@ class DetailActivity : AppCompatActivity() {
             binding.description.text = drink.description
             binding.author.text = drink.author
 
+            // Debug-Log für Getränkdetails
             Log.e(
-                "Drinktitel:${drink.title}Drink description:${drink.description}Drink author:${drink.author}",
-                "Fehler beobachten"
+                "Drinktitel: ${drink.title} Drink description: ${drink.description} Drink author: ${drink.author}",
+                "Beobachtung von Fehlern"
             )
         }
     }
@@ -55,7 +57,7 @@ class DetailActivity : AppCompatActivity() {
      * Diese Methode sucht nach einem Getränk in der Liste basierend auf seiner ID.
      */
     private fun drinkFromId(drinkId: Int): Drink? {
-        Log.e("Detail", "${drinkList.size}")
+        Log.e("Detail", "Größe der Getränkeliste: ${drinkList.size}")
         for (drink in drinkList) {
             if (drink.id == drinkId)
                 return drink

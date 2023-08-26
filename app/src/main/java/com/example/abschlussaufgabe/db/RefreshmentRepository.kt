@@ -1,13 +1,23 @@
+/**
+ * Repository-Klasse zur Interaktion mit der Erfrischungsdatenbank.
+ */
+
 package com.example.abschlussaufgabe.db
 
 import android.content.Context
 import com.example.abschlussaufgabe.exampledata.ListData
 import com.example.abschlussaufgabe.local.PriceListData
 
+// MoneyFragment( Inspektor - Modus)
+
 class RefreshmentRepository(private val database: RefreshmentDatabase) {
 
     companion object {
         private var repository: RefreshmentRepository? = null
+
+        /**
+         * Gibt eine Instanz des Repository zurück oder erstellt eine neue Instanz.
+         */
 
         fun getInstance(context: Context): RefreshmentRepository =
             repository ?: buildRepo(
@@ -19,6 +29,10 @@ class RefreshmentRepository(private val database: RefreshmentDatabase) {
         private fun buildRepo(refreshmentDatabase: RefreshmentDatabase): RefreshmentRepository =
             RefreshmentRepository(refreshmentDatabase)
     }
+
+    /**
+     * Füllt die Datenbank mit vordefinierten Daten, falls leer.
+     */
 
     fun prepopulateDB() {
         try {
@@ -47,9 +61,19 @@ class RefreshmentRepository(private val database: RefreshmentDatabase) {
             }
         } catch (e: Exception) { }
     }
+
+    /**
+     * Aktualisiert ein Artikel-Datenelement in der Datenbank.
+     */
+
     fun updateItem(itemData: PriceListData) {
         database.refreshmentDao.updateItem(itemData)
     }
+
+
+    /**
+     * Löscht ein Artikel-Datenelement aus der Datenbank.
+     */
 
     fun deleteItem(itemData: PriceListData) {
         database.refreshmentDao.deleteItem(itemData)
