@@ -44,13 +44,13 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
 
             // Absichtliches Auslösen eines Absturzes (auskommentiert)
             // val crashButton = Button(this)
-            // crashButton.text = "Test Crash"
+             //crashButton.text = "Test Crash"
             // crashButton.setOnClickListener {
-            //     throw RuntimeException("Test Crash") // Erzwingt einen Absturz
+               //  throw RuntimeException("Test Crash") // Erzwingt einen Absturz
             // }
-            // addContentView(crashButton, ViewGroup.LayoutParams(
-            //     ViewGroup.LayoutParams.MATCH_PARENT,
-            //     ViewGroup.LayoutParams.WRAP_CONTENT))
+             //addContentView(crashButton, ViewGroup.LayoutParams(
+               //  ViewGroup.LayoutParams.MATCH_PARENT,
+              //   ViewGroup.LayoutParams.WRAP_CONTENT))
         }
 
         // Sucht das NavHostFragment
