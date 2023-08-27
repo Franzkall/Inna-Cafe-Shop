@@ -51,7 +51,7 @@
                 android:lines="1"
                 android:text="@string/numero_1"
                 android:textColor="@color/black"
-                android:textSize="12sp"
+                android:textSize="8sp"
                 android:textStyle="bold" />
 
         </LinearLayout>

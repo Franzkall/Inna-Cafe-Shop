@@ -9,8 +9,8 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
-        android:text="Robusta-Cafe-Moers"
+        android:layout_marginTop="176sp"
+        android:text="@string/inna_s_cafe_shop"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -26,5 +26,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/iconx" />
+        app:srcCompat="@drawable/pp2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

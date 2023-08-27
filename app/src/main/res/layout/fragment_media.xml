@@ -62,7 +62,7 @@
             android:layout_marginBottom="-100dp"
             android:text="Folge Robusta-Cafe auf"
             android:textColor="#D7CCC8"
-            android:textSize="28sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/imageView2"
             app:layout_constraintEnd_toEndOf="parent"

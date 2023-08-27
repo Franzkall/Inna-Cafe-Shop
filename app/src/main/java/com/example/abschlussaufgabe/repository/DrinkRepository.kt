@@ -16,7 +16,7 @@ object Repository {
             R.drawable.es1,
             "2,30 €",
             "Espresso",
-            "Espresso ist eine konzentrierte Kaffeezubereitung, bei der heißes Wasser mit hohem Druck durch fein gemahlenes Kaffeemehl gepresst wird. Diese Methode extrahierte intensive Aromen und Öle in etwa 25-30 Sekunden, und das Ergebnis ist ein reichhaltiger und kräftiger Kaffee mit dicker Crema. Ursprünglich stammt die Espresso-Zubereitung aus Italien, wo sie im Laufe der Zeit zu einem integralen Bestandteil der Kaffeekultur geworden ist."
+            "Espresso ist eine konzentrierte Kaffeezubereitung, bei der heißes Wasser mit hohem Druck durch fein gemahlenes Kaffeemehl gepresst wird. Diese Methode extrahierte intensive Aromen und Öle in etwa 25-30 Sekunden, und das Ergebnis ist ein reichhaltiger und kräftiger Kaffee mit dicker Crema. "
         ).apply { id = 1 }
         drinkList.add(drink1)
 
@@ -24,39 +24,40 @@ object Repository {
             R.drawable.es2,
             "3,50 €",
             "Cappuccino",
-            "Cappuccino ist eine ausgewogene Kombination aus Espresso, heißer Milch und Milchschaum. Ursprünglich in Italien entstanden, ist der Cappuccino weltweit bekannt. Die Zubereitung beginnt mit einem kräftigen Espresso, dem heiße Milch hinzugefügt wird. Anschließend wird Milchschaum aufgegossen, wodurch sich eine charakteristische Dreischicht-Struktur bildet. Dies verleiht dem Cappuccino seine ausgewogene Harmonie von Aromen: die Intensität des Espressos, die Cremigkeit der Milch und die Leichtigkeit des Milchschaums. Ein Genuss für verschiedenste Vorlieben und Gelegenheiten."
+            "Cappuccino ist eine ausgewogene Kombination aus Espresso, heißer Milch und Milchschaum. Ursprünglich in Italien entstanden, ist der Cappuccino weltweit bekannt. Die Zubereitung beginnt mit einem kräftigen Espresso, dem heiße Milch hinzugefügt wird. Anschließend wird Milchschaum aufgegossen, wodurch sich eine charakteristische Dreischicht-Struktur bildet."
         ).apply { id = 2 }
         drinkList.add(drink2)
 
         val drink3 = Drink(
-            R.drawable.foto3,
-            "Frappuccino",
-            "New Taste",
-            "Fein und süß, ob im Winter oder im Sommer, Balsam für die Seele."
+            R.drawable.foto4,
+            "3,50 €",
+            "Latte Macchiato",
+            "Ein delikater Kaffee, bestehend aus schichtweise gegossener Milch und Espresso. Die sanfte Süße der Milch kombiniert mit der kräftigen Intensität des Espresso sorgt für ein harmonisches Geschmackserlebnis. Ob im Winter zum Aufwärmen oder im Sommer als erfrischender Genuss – der Latte Macchiato ist eine Wohltat für die Sinne."
         ).apply { id = 3 }
         drinkList.add(drink3)
 
         val drink4 = Drink(
-            R.drawable.foto4,
-            "Vannilla",
-            "Macchiato",
-            "Modern.. Modern, eine Variation, die besonders beliebt ist."
+            R.drawable.foto5,
+            "3,20 €",
+            "Cioccolata Italiana",
+            "Verwöhnen Sie sich mit einer italienischen Köstlichkeit – reichhaltige Schokolade in flüssiger Form. Ein sündhaft leckeres Getränk, das puren Genuss verspricht und Ihre Sinne umhüllt."
         ).apply { id = 4 }
         drinkList.add(drink4)
 
         val drink5 = Drink(
-            R.drawable.foto5,
-            "Bruce",
-            "Delicato",
-            "Global auch in unserem Lieblingsgetränk."
+            R.drawable.jj14,
+            "4,20 €",
+            "Schokolino",
+            "Ein verlockender Frappuccino mit dem unwiderstehlichen Geschmack von Kinder Bueno. Genießen Sie die perfekte Kombination aus Schokolade und Kaffee in einem erfrischenden Getränk."
         ).apply { id = 5 }
         drinkList.add(drink5)
 
+
         val drink6 = Drink(
-            R.drawable.foto6,
-            "Latte Macchiato",
-            "Classico",
-            "Feiner Geschmack, langer Genuss."
+            R.drawable.jj15,
+            "4,50 €",
+            "Milchshake Joghurette",
+            "Genießen Sie die perfekte Verbindung von cremigem Joghurt und Schokolade in unserem unwiderstehlichen Milchshake. Ein Genuss, der lange auf der Zunge bleibt."
         ).apply { id = 6 }
         drinkList.add(drink6)
 

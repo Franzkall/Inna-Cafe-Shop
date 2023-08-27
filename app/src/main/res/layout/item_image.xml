@@ -33,7 +33,7 @@
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
-            android:layout_height="31dp"
+            android:layout_height="28sp"
             android:text="Beispiel"
             android:textColor="@color/black"
             android:textSize="20sp"

@@ -14,13 +14,10 @@ class DataSource {
     fun loadImages(): List<Image> {
         return listOf(
             Image(R.drawable.jj5,"Inna's Cafe-Shop"),
-            Image(R.drawable.jj6,"Treue wird belohnt"),
             Image(R.drawable.nuovo3,"Lavazza Geschmack"),
             Image(R.drawable.jj7,"Smoothie-Bar"),
-            Image(R.drawable.lavazza,"Der Klassiker"),
             Image(R.drawable.jj8,"Patisserie"),
             Image(R.drawable.jj10,"Crepes-Bar"),
-
             Image(R.drawable.jj9,"Ambiente"),
 
         )
