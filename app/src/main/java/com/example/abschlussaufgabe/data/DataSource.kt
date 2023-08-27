@@ -13,17 +13,16 @@ class DataSource {
      */
     fun loadImages(): List<Image> {
         return listOf(
-            Image(R.drawable.codice,"Trest1"),
-            Image(R.drawable.nuovo2,"test2"),
-            Image(R.drawable.nuovo3,"test3"),
-            Image(R.drawable.shakes,"test4"),
-            Image(R.drawable.nuovo6,"test"),
-            Image(R.drawable.gg1,"test6"),
-            Image(R.drawable.gg2,"arci"),
-            Image(R.drawable.two,"pelago"),
-            Image(R.drawable.bild2,"wolke"),
-            Image(R.drawable.new_logo,"mare"),
-            Image(R.drawable.lavazza,"terra")
+            Image(R.drawable.jj5,"Inna's Cafe-Shop"),
+            Image(R.drawable.jj6,"Treue wird belohnt"),
+            Image(R.drawable.nuovo3,"Lavazza Geschmack"),
+            Image(R.drawable.jj7,"Smoothie-Bar"),
+            Image(R.drawable.lavazza,"Der Klassiker"),
+            Image(R.drawable.jj8,"Patisserie"),
+            Image(R.drawable.jj10,"Crepes-Bar"),
+
+            Image(R.drawable.jj9,"Ambiente"),
+
         )
     }
 }
