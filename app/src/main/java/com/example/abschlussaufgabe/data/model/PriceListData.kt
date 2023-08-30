@@ -2,7 +2,7 @@
  * Lokale Datenklasse für Preislisten-Daten mit Room-Datenbank.
  */
 
-package com.example.abschlussaufgabe.local
+package com.example.abschlussaufgabe.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

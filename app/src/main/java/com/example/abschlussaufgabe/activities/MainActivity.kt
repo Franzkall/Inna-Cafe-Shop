@@ -1,4 +1,4 @@
-package com.example.abschlussaufgabe.ui
+package com.example.abschlussaufgabe.activities
 
 import android.os.Bundle
 import android.widget.TextView

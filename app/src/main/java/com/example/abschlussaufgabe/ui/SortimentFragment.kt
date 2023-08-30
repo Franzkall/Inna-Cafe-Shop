@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.abschlussaufgabe.activities.DetailActivity
+import com.example.abschlussaufgabe.activities.MainActivity
 import com.example.abschlussaufgabe.adapter.DrinkAdapter
 import com.example.abschlussaufgabe.data.model.DRINK_ID_EXTRA
 import com.example.abschlussaufgabe.data.model.Drink

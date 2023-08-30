@@ -14,6 +14,7 @@ import com.budiyev.android.codescanner.CodeScanner
 import com.budiyev.android.codescanner.DecodeCallback
 import com.budiyev.android.codescanner.ErrorCallback
 import com.budiyev.android.codescanner.ScanMode
+import com.example.abschlussaufgabe.activities.MainActivity
 import com.example.abschlussaufgabe.databinding.FragmentRewardBinding
 
 /**

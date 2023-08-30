@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import com.example.abschlussaufgabe.activities.MainActivity
 import com.example.abschlussaufgabe.databinding.FragmentViewBinding
 import com.example.abschlussaufgabe.viewmodel.PanoramicViewModel
 

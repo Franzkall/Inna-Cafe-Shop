@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.abschlussaufgabe.data.model.Panoramic
-import com.example.abschlussaufgabe.data.model.PanoramicDataProvider
+import com.example.abschlussaufgabe.data.PanoramicDataProvider
 //ViewFragment
 /**
  * ViewModel für die Anzeige von ständig wechselnden Bilderinformationen.

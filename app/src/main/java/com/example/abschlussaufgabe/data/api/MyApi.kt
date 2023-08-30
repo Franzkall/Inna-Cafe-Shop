@@ -1,4 +1,4 @@
-package com.example.abschlussaufgabe.json
+package com.example.abschlussaufgabe.data.api
 
 import com.example.abschlussaufgabe.data.model.GoogleSheetResponce
 import com.squareup.moshi.Moshi

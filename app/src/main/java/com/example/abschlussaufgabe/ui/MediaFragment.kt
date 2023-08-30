@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.abschlussaufgabe.R
+import com.example.abschlussaufgabe.activities.MainActivity
 import com.example.abschlussaufgabe.databinding.FragmentMediaBinding
 
 /**

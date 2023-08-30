@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.example.abschlussaufgabe.R
+import com.example.abschlussaufgabe.activities.MainActivity
 import com.example.abschlussaufgabe.adapter.DrinkItemsAdapter
 import com.example.abschlussaufgabe.databinding.FragmentMoneyBinding
 import com.example.abschlussaufgabe.viewmodel.MoneyFragmentViewModel

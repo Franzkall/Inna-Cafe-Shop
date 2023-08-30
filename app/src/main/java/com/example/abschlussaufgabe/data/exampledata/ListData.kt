@@ -3,9 +3,9 @@
  * Beispiel-Daten für Erfrischungsartikel.
  */
 
-package com.example.abschlussaufgabe.exampledata
+package com.example.abschlussaufgabe.data.exampledata
 
-import com.example.abschlussaufgabe.local.PriceListData
+import com.example.abschlussaufgabe.data.model.PriceListData
 
 // MoneyFragment (Inspektor - Modus)
 object ListData {

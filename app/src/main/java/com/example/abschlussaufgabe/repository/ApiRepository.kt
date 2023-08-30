@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.abschlussaufgabe.BuildConfig
 import com.example.abschlussaufgabe.data.model.DrinkItems
-import com.example.abschlussaufgabe.json.MyApi
+import com.example.abschlussaufgabe.data.api.MyApi
 
 // MoneyFragment
 

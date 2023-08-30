@@ -7,6 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.WindowManager
 import com.example.abschlussaufgabe.R
+import com.example.abschlussaufgabe.activities.MainActivity
 
 /**
  * Diese Aktivität dient als Startbildschirm der Anwendung.
@@ -22,7 +23,7 @@ class SplashActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAGS_CHANGED
         )
 
-        // Ein Handler wird verwendet, um die com.example.abschlussaufgabe.ui.MainActivity nach einer Verzögerung zu starten.
+        // Ein Handler wird verwendet, um die com.example.abschlussaufgabe.activities.MainActivity nach einer Verzögerung zu starten.
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

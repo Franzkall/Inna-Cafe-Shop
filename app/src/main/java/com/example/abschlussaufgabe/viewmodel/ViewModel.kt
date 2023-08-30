@@ -2,7 +2,7 @@ package com.example.abschlussaufgabe.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.abschlussaufgabe.json.MyApi
+import com.example.abschlussaufgabe.data.api.MyApi
 import com.example.abschlussaufgabe.repository.ApiRepository
 import kotlinx.coroutines.launch
 //MoneyFragment

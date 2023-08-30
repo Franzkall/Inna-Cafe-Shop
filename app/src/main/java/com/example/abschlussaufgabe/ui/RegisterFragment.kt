@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.abschlussaufgabe.R
+import com.example.abschlussaufgabe.activities.MainActivity
 import com.example.abschlussaufgabe.data.model.User
 import com.example.abschlussaufgabe.databinding.FragmentRegisterBinding
 import com.example.abschlussaufgabe.viewmodel.AuthViewModel

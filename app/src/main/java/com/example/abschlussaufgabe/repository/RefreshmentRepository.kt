@@ -5,9 +5,9 @@
 package com.example.abschlussaufgabe.repository
 
 import android.content.Context
-import com.example.abschlussaufgabe.db.RefreshmentDatabase
-import com.example.abschlussaufgabe.exampledata.ListData
-import com.example.abschlussaufgabe.local.PriceListData
+import com.example.abschlussaufgabe.data.db.RefreshmentDatabase
+import com.example.abschlussaufgabe.data.exampledata.ListData
+import com.example.abschlussaufgabe.data.model.PriceListData
 
 // MoneyFragment( Inspektor - Modus)
 

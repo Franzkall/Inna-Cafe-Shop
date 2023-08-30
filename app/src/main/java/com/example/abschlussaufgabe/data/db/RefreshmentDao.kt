@@ -1,14 +1,14 @@
 /**
  * Data Access Object (DAO) zur Interaktion mit der Datenbank für Erfrischungsartikel.
  */
-package com.example.abschlussaufgabe.db
+package com.example.abschlussaufgabe.data.db
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import androidx.room.Delete
-import com.example.abschlussaufgabe.local.PriceListData
+import com.example.abschlussaufgabe.data.model.PriceListData
 
 // MoneyFragment (Alternative Preisliste-Speicherung über Room, Inspektor-Modus)
 

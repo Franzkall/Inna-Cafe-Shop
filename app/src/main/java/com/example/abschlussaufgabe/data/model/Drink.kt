@@ -3,7 +3,7 @@ package com.example.abschlussaufgabe.data.model
 /**
  * Datenklasse, die Informationen über einen Drink speichert.
  */
-class Drink(
+data class Drink(
     var cover: Int,        // Das Cover-Bild des Drinks
     var author: String,    // Der Autor des Drinks
     var title: String,     // Der Titel des Drinks

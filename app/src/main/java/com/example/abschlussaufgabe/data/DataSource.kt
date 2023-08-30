@@ -1,7 +1,8 @@
-package com.example.abschlussaufgabe.data.model
+package com.example.abschlussaufgabe.data
 
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.Image
+
 //CasaFragment
 /**
  * Datenquelle für Bilder.
