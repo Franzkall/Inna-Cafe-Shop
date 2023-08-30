@@ -1,4 +1,4 @@
-package com.example.abschlussaufgabe.data
+package com.example.abschlussaufgabe.data.model
 
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.Image

@@ -2,9 +2,10 @@
  * Repository-Klasse zur Interaktion mit der Erfrischungsdatenbank.
  */
 
-package com.example.abschlussaufgabe.db
+package com.example.abschlussaufgabe.repository
 
 import android.content.Context
+import com.example.abschlussaufgabe.db.RefreshmentDatabase
 import com.example.abschlussaufgabe.exampledata.ListData
 import com.example.abschlussaufgabe.local.PriceListData
 

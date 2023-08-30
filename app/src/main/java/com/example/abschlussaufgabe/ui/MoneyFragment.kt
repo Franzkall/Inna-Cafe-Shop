@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ViewFlipper
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -13,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.adapter.DrinkItemsAdapter
 import com.example.abschlussaufgabe.databinding.FragmentMoneyBinding
-import com.example.abschlussaufgabe.viewholder.MoneyFragmentViewModel
+import com.example.abschlussaufgabe.viewmodel.MoneyFragmentViewModel
 
 /**
  * Dieses Fragment zeigt eine Liste von Getränken mit Preisen an.

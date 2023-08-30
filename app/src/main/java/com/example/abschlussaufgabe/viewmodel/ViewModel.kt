@@ -1,4 +1,4 @@
-package com.example.abschlussaufgabe.viewholder
+package com.example.abschlussaufgabe.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

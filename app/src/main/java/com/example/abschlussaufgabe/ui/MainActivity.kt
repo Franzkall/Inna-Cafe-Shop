@@ -1,8 +1,6 @@
 package com.example.abschlussaufgabe.ui
 
 import android.os.Bundle
-import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -12,7 +10,7 @@ import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.ActivityMainBinding
-import com.example.abschlussaufgabe.db.RefreshmentRepository
+import com.example.abschlussaufgabe.repository.RefreshmentRepository
 import com.example.abschlussaufgabe.util.ToolbarTextUpdater
 
 /**
