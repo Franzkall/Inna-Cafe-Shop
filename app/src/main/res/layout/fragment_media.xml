@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="-100dp"
-            android:text="Folge Robusta-Cafe auf"
+            android:text="Folge Inna's-Cafe auf"
             android:textColor="#D7CCC8"
             android:textSize="20sp"
             android:textStyle="bold"

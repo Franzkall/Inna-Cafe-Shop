@@ -32,7 +32,7 @@ class ViewFragment : Fragment() {
 
         // Den Titel der Toolbar in der MainActivity setzen
         val activity: MainActivity = requireActivity() as MainActivity
-        activity.toolbarTitle.text = "Panoramic"
+        activity.toolbarTitle.text = "Events"
 
         // Beobachtet die Picture-Daten im ViewModel, um die Ansicht zu aktualisieren.
         model.getPictureData().observe(viewLifecycleOwner, Observer { city ->
