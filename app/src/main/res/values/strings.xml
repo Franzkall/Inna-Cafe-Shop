@@ -47,6 +47,12 @@
     <string name="skip">Skip</string>
     <string name="drawer">Drawer</string>
     <string name="inna_s_cafe_shop">Inna\'s-Cafe-Shop</string>
+    <string name="zur_ck">Zurück</string>
+    <string name="registrieren">Registrieren</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
 
 
 </resources>

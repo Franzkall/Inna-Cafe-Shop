@@ -1,17 +1,17 @@
 
-/**
- * Beispiel-Daten für Erfrischungsartikel.
- */
 
 package com.example.abschlussaufgabe.data.exampledata
 
 import com.example.abschlussaufgabe.data.model.PriceListData
+/**
+ * Beispiel-Daten für Erfrischungsartikel.
+ */
 
-// MoneyFragment (Inspektor - Modus)
+ //MoneyFragment (Inspektor - Modus)
 object ListData {
 
-    val refreshment1 = PriceListData(
-        id = 1,
+   val refreshment1 = PriceListData(
+         id = 1,
         itemName = "Espresso",
         price = 2.30,
     )
@@ -54,7 +54,7 @@ object ListData {
         id = 9,
         itemName = "Caffe Mocca",
         price = 3.90,
-    )
+   )
     val refreshment10 = PriceListData(
         id = 10,
         itemName = "Caffe Mocca Bianco",

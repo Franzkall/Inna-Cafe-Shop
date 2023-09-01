@@ -4,79 +4,39 @@
 
 package com.example.abschlussaufgabe.repository
 
-import android.content.Context
+import android.util.Log
+import androidx.lifecycle.LiveData
 import com.example.abschlussaufgabe.data.db.RefreshmentDatabase
-import com.example.abschlussaufgabe.data.exampledata.ListData
 import com.example.abschlussaufgabe.data.model.PriceListData
 
-// MoneyFragment( Inspektor - Modus)
+const val TAG = "RefreshmentRepository"
 
 class RefreshmentRepository(private val database: RefreshmentDatabase) {
 
-    companion object {
-        private var repository: RefreshmentRepository? = null
+    // LiveData-Objekt, das eine Liste von Preisdaten aus der Datenbank enthält.
 
-        /**
-         * Gibt eine Instanz des Repository zurück oder erstellt eine neue Instanz.
-         */
-
-        fun getInstance(context: Context): RefreshmentRepository =
-            repository ?: buildRepo(
-                RefreshmentDatabase.getInstance(context.applicationContext)
-            ).also {
-                repository = it
-            }
-
-        private fun buildRepo(refreshmentDatabase: RefreshmentDatabase): RefreshmentRepository =
-            RefreshmentRepository(refreshmentDatabase)
-    }
+    val refreshmentList: LiveData<List<PriceListData>> = database.refreshmentDao.getAll()
 
     /**
-     * Füllt die Datenbank mit vordefinierten Daten, falls leer.
+     * Fügt ein Preisdaten-Objekt in die Datenbank ein.
+     *
+     * @param listData Das Preisdaten-Objekt, das eingefügt werden soll.
      */
-
-    fun prepopulateDB() {
+    suspend fun insert(listData: PriceListData) {
         try {
-            if (database.refreshmentDao.getCount() == 0) {
-                database.refreshmentDao.insertItem(ListData.refreshment1)
-                database.refreshmentDao.insertItem(ListData.refreshment2)
-                database.refreshmentDao.insertItem(ListData.refreshment3)
-                database.refreshmentDao.insertItem(ListData.refreshment4)
-                database.refreshmentDao.insertItem(ListData.refreshment5)
-                database.refreshmentDao.insertItem(ListData.refreshment6)
-                database.refreshmentDao.insertItem(ListData.refreshment7)
-                database.refreshmentDao.insertItem(ListData.refreshment8)
-                database.refreshmentDao.insertItem(ListData.refreshment9)
-                database.refreshmentDao.insertItem(ListData.refreshment10)
-                database.refreshmentDao.insertItem(ListData.refreshment11)
-                database.refreshmentDao.insertItem(ListData.refreshment12)
-                database.refreshmentDao.insertItem(ListData.refreshment13)
-                database.refreshmentDao.insertItem(ListData.refreshment14)
-                database.refreshmentDao.insertItem(ListData.refreshment15)
-                database.refreshmentDao.insertItem(ListData.refreshment16)
-                database.refreshmentDao.insertItem(ListData.refreshment17)
-                database.refreshmentDao.insertItem(ListData.refreshment18)
-                database.refreshmentDao.insertItem(ListData.refreshment19)
-                database.refreshmentDao.insertItem(ListData.refreshment20)
-
-            }
-        } catch (e: Exception) { }
+            database.refreshmentDao.insert(listData)
+        } catch (e: Exception) {
+            Log.d(TAG, "Fehler beim Einfügen in die Datenbank: $e")
+        }
     }
 
     /**
-     * Aktualisiert ein Artikel-Datenelement in der Datenbank.
+     * Fügt eine Liste von Preisdaten-Objekten in die Datenbank ein.
+     *
+     * @param refreshment Die Liste von Preisdaten-Objekten, die eingefügt werden sollen.
      */
 
-    fun updateItem(itemData: PriceListData) {
-        database.refreshmentDao.updateItem(itemData)
-    }
-
-
-    /**
-     * Löscht ein Artikel-Datenelement aus der Datenbank.
-     */
-
-    fun deleteItem(itemData: PriceListData) {
-        database.refreshmentDao.deleteItem(itemData)
+    suspend fun insertAll(refreshment: List<PriceListData>) {
+        database.refreshmentDao.insertAll(refreshment)
     }
 }

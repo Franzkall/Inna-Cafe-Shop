@@ -10,7 +10,6 @@ import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.ActivityMainBinding
-import com.example.abschlussaufgabe.repository.RefreshmentRepository
 import com.example.abschlussaufgabe.util.ToolbarTextUpdater
 
 /**
@@ -36,30 +35,28 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
             // Öffnet die Navigations-Schublade
             binding.drawer.open()
 
-            // Initialisiert die Datenbank mit vordefinierten Werten
-            val repository = RefreshmentRepository.getInstance(this)
-            repository.prepopulateDB()
-
             // Absichtliches Auslösen eines Absturzes (auskommentiert)
             // val crashButton = Button(this)
-             //crashButton.text = "Test Crash"
+            // crashButton.text = "Test Crash"
             // crashButton.setOnClickListener {
-               //  throw RuntimeException("Test Crash") // Erzwingt einen Absturz
+            // throw RuntimeException("Test Crash") // Erzwingt einen Absturz
             // }
-             //addContentView(crashButton, ViewGroup.LayoutParams(
-               //  ViewGroup.LayoutParams.MATCH_PARENT,
-              //   ViewGroup.LayoutParams.WRAP_CONTENT))
+            // addContentView(crashButton, ViewGroup.LayoutParams(
+            // ViewGroup.LayoutParams.WRAP_CONTENT))
         }
 
         // Sucht das NavHostFragment
+
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
         navController = navHostFragment.navController
 
         // Verknüpft die Navigationsansicht mit dem NavController
+
         binding.navigationView.setupWithNavController(navController)
 
         // Navigationssteuerung basierend auf dem App-Zustand
+
         if (savedInstanceState == null) {
             if (isFirstTimeLaunch()) {
                 navController.navigate(R.id.onboardingFragment)
@@ -69,6 +66,7 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
         }
 
         // Verknüpft die untere Navigationsleiste mit dem NavController
+
         val bottomNavigationBar = binding.bottomNavigationView
         setupWithNavController(bottomNavigationBar, navController)
     }
@@ -95,5 +93,4 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
 
         return isFirstTime
     }
-
 }

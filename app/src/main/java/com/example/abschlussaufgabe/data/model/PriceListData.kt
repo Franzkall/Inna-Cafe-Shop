@@ -11,9 +11,9 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "price_table") // Definiert den Tabellennamen für die Room-Datenbank
 data class PriceListData(
-    @PrimaryKey(autoGenerate = true) // Gibt an, dass die ID automatisch generiert wird
-    var id: Int, // Eindeutige Identifikationsnummer für jedes Element
-    var itemName: String, // Name des Artikels in der Preisliste
-    var price: Double, // Preis des Artikels in der Preisliste
+    @PrimaryKey(autoGenerate = true)    // Gibt an, dass die ID automatisch generiert wird
+    var id: Long,             // Eindeutige Identifikationsnummer für jedes Element
+    var itemName: String,    // Name des Artikels in der Preisliste
+    var price: Double,       // Preis des Artikels in der Preisliste
 )
 
