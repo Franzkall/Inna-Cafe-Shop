@@ -33,7 +33,7 @@ fun getDataBase(context: Context): RefreshmentDatabase {
                 RefreshmentDatabase::class.java,
                 "refreshment_database"
             )
-                .build()
+                .allowMainThreadQueries().build()
         }
     }
     return INSTANCE

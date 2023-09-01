@@ -16,35 +16,35 @@ import com.example.abschlussaufgabe.data.model.PriceListData
 // MoneyFragment (Alternative Preisliste-Speicherung über Room, Inspektor-Modus)
 
 @Dao
-abstract class RefreshmentDao {
+interface  RefreshmentDao {
 
     /**
      * Fügt einen Erfrischungsartikel zur Datenbank hinzu oder ersetzt ihn, wenn er bereits existiert.
      * @param refreshmentDatabase Der hinzuzufügende oder zu ersetzende Erfrischungsartikel.
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend abstract fun insert(refreshmentDatabase: PriceListData)
+      fun insert(refreshmentDatabase: PriceListData)
 
     /**
      * Fügt eine Liste von Erfrischungsartikeln zur Datenbank hinzu oder ersetzt sie, wenn sie bereits existieren.
      * @param priceListData Die Liste der hinzuzufügenden oder zu ersetzenden Erfrischungsartikel.
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend abstract fun insertAll(priceListData: List<PriceListData>)
+    fun insertAll(priceListData: List<PriceListData>)
 
     /**
      * Aktualisiert einen Erfrischungsartikel in der Datenbank.
      * @param refreshmentDatabase Der zu aktualisierende Erfrischungsartikel.
      */
     @Update
-    suspend abstract fun update(refreshmentDatabase: PriceListData)
+      fun update(refreshmentDatabase: PriceListData)
 
     /**
      * Ruft alle Erfrischungsartikel aus der Datenbank ab und liefert sie als LiveData.
      * @return LiveData-Objekt, das eine Liste von Erfrischungsartikeln enthält.
      */
     @Query("SELECT * FROM price_table")
-  abstract  fun getAll(): LiveData<List<PriceListData>>
+    fun getAll(): LiveData<List<PriceListData>>
 
     /**
      * Ruft einen Erfrischungsartikel aus der Datenbank anhand seiner ID ab und liefert ihn als LiveData.
@@ -52,6 +52,6 @@ abstract class RefreshmentDao {
      * @return LiveData-Objekt, das den abgerufenen Erfrischungsartikel enthält.
      */
     @Query("SELECT * from price_table WHERE id = :key")
-   abstract fun getById(key: Int): LiveData<PriceListData>
+    fun getById(key: Int): LiveData<PriceListData>
 
 }

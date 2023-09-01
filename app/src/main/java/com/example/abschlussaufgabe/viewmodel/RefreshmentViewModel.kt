@@ -20,16 +20,19 @@ class RefreshmentViewModel(application: Application) : AndroidViewModel(applicat
     init {
         insertExampleData()
     }
+    fun benjamin() {
+        Log.e("Hallo", "Hello")
+    }
 
     private fun insertExampleData() {
         viewModelScope.launch {
-            val exampleData = ListData
+           val exampleData = ListData
             try {
-                repository.insert(exampleData.refreshment1)
+               repository.insert(exampleData.refreshment1)
                 repository.insert(exampleData.refreshment2)
                 // andere refreshment......
-            } catch (e: Exception) {
-                Log.d(TAG, "Failed to insert example data into Database: $e")
+           } catch (e: Exception) {
+               Log.d(TAG, "Failed to insert example data into Database: $e")
             }
         }
     }

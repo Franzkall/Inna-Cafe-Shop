@@ -1,5 +1,6 @@
 package com.example.abschlussaufgabe.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.abschlussaufgabe.data.api.MyApi
@@ -20,7 +21,9 @@ class MoneyFragmentViewModel : ViewModel() {
     init {
         loadDrinks()
     }
-
+    fun stephan() {
+        Log.e("Hallo", "Hello")
+    }
     /**
      * Lädt die Getränke mithilfe des Repositorys und Coroutine-Scope.
      */

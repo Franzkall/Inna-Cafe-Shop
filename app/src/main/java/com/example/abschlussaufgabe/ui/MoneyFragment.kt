@@ -46,6 +46,9 @@ class MoneyFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel.stephan()
+        refreshmentViewModel.benjamin()
+
         // Initialisierung des ViewModels und Adapters.
 
         // Der RecyclerView wird mit dem Adapter verbunden.
@@ -63,7 +66,7 @@ class MoneyFragment : Fragment() {
 
             // Die Preisliste-Daten aus den Getränkedaten erstellen und in die Datenbank einfügen.
 
-           // createPriceListData(drinks)
+            createPriceListData(drinks)
 
             // Den RecyclerView-Adapter mit den Getränkedaten aktualisieren.
 
@@ -76,14 +79,14 @@ class MoneyFragment : Fragment() {
      *
      * @param drinks Die Liste der Getränkedaten.
      */
-   /* private fun createPriceListData(drinks: List<DrinkItems>) {
+   private fun createPriceListData(drinks: List<DrinkItems>) {
         val priceListData = mutableListOf<PriceListData>()
         for ((id, drink) in drinks.withIndex()) {
             val item = PriceListData(id = id.toLong(), itemName = drink.drink, price = drink.price.toDouble())
             priceListData.add(item)
         }
         insertIntoDatabase(priceListData)
-    }*/
+    }
 
     /**
      * Fügt die erstellten Preisliste-Daten in die Datenbank ein.
@@ -91,7 +94,7 @@ class MoneyFragment : Fragment() {
      * @param priceListData Die Liste der Preisliste-Daten.
      */
     private fun insertIntoDatabase(priceListData: List<PriceListData>) {
-        refreshmentViewModel.insertAllRefreshment(priceListData)
+       refreshmentViewModel.insertAllRefreshment(priceListData)
     }
 }
 
