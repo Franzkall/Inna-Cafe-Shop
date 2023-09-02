@@ -22,7 +22,7 @@ class MoneyFragmentViewModel : ViewModel() {
         loadDrinks()
     }
     fun stephan() {
-        Log.e("Hallo", "Hello")
+       Log.e("Hallo", "Hello")
     }
     /**
      * Lädt die Getränke mithilfe des Repositorys und Coroutine-Scope.

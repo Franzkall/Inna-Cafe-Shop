@@ -140,9 +140,6 @@ object Repository {
             "Feiner Geschmack, langer Genuss."
         ).apply { id = 16 }
         drinkList.add(drink16)
-
-
-
     }
 }
 

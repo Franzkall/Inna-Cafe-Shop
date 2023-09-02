@@ -3,7 +3,7 @@ package com.example.abschlussaufgabe.data
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.Image
 
-//CasaFragment
+//com.example.abschlussaufgabe.ui.CasaFragment
 /**
  * Datenquelle für Bilder.
  */

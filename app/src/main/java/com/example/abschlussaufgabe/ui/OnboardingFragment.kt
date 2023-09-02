@@ -82,7 +82,7 @@ class OnboardingFragment : Fragment() {
     }
 
     /**
-     * Navigiert zum CasaFragment.
+     * Navigiert zum com.example.abschlussaufgabe.ui.CasaFragment.
      */
     private fun navigateToCasaFragment() {
         val fragmentTransaction = parentFragmentManager.beginTransaction()
