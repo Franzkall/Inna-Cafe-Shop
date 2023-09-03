@@ -19,7 +19,7 @@
             android:clickable="true"
             android:contentDescription="@string/Moers"
             android:focusable="true"
-            app:cardCornerRadius="15dp">
+            app:cardCornerRadius="20dp">
 
             <ImageView
                 android:id="@+id/imageView"
