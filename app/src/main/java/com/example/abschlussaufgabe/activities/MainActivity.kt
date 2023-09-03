@@ -11,6 +11,10 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.ActivityMainBinding
 import com.example.abschlussaufgabe.util.ToolbarTextUpdater
+import com.google.firebase.appcheck.ktx.appCheck
+import com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderFactory
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.ktx.initialize
 
 /**
  * Die Hauptaktivität der App.
@@ -43,6 +47,11 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
             // }
             // addContentView(crashButton, ViewGroup.LayoutParams(
             // ViewGroup.LayoutParams.WRAP_CONTENT))
+
+            Firebase.initialize(context = this)
+            Firebase.appCheck.installAppCheckProviderFactory(
+                PlayIntegrityAppCheckProviderFactory.getInstance(),
+            )
         }
 
         // Sucht das NavHostFragment

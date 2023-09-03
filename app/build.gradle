@@ -93,6 +93,17 @@ dependencies {
     implementation 'androidx.fragment:fragment-ktx:1.6.1'
     implementation 'androidx.recyclerview:recyclerview:1.3.1'
 
+
+    dependencies {
+        // Import the BoM for the Firebase platform
+        implementation(platform("com.google.firebase:firebase-bom:32.2.3"))
+
+        // Add the dependencies for the App Check libraries
+        // When using the BoM, you don't specify versions in Firebase library dependencies
+        implementation("com.google.firebase:firebase-appcheck-playintegrity")
+        implementation("com.google.firebase:firebase-appcheck-ktx")
+    }
+
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
