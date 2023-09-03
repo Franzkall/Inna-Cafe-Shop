@@ -26,6 +26,7 @@ class CasaActivity : AppCompatActivity() {
         if (image != null) {
             binding.cover1.setImageResource(image.imageSrc)
             binding.title1.text = image.description
+            binding.text1.text = image.text
         }
     }
 

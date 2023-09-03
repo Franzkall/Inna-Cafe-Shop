@@ -9,14 +9,16 @@ object CasaImageRepository {
     init {
         val image1 = Image(
             R.drawable.jj5,
-            "Inna's-Cafe-Shop"
+            "Inna's-Cafe-Shop",
+            text =  "khjkhjhgjhjbjh ijhhu jhbh bjhhg gjhghv  jhffztgfgfftfhgfztfztf jhfhghgf jhvhghgfhgf"
         ).apply { id = 1 }
         imageList.add(image1)
     }
     init {
         val image2 = Image(
            R.drawable.nuovo3,
-        "Lavazza Geschmeck"
+        "Lavazza Geschmack",
+            text = "mnmnmnkjj kjhjhgjhjhg mbjhghghv ggjhg"
         ).apply { id = 2 }
         imageList.add(image2)
     }
