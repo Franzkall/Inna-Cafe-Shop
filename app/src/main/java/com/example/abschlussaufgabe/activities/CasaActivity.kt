@@ -1,11 +1,12 @@
 package com.example.abschlussaufgabe.activities
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.abschlussaufgabe.data.DataSource
 import com.example.abschlussaufgabe.data.model.IMAGE_ID_EXTRA
 import com.example.abschlussaufgabe.data.model.Image
 import com.example.abschlussaufgabe.databinding.ActivityCasaBinding
+import com.example.abschlussaufgabe.repository.CasaImageRepository.imageList
 
 class CasaActivity : AppCompatActivity() {
 
@@ -19,18 +20,19 @@ class CasaActivity : AppCompatActivity() {
 
         val imageId = intent.getIntExtra(IMAGE_ID_EXTRA, 1)
 
-        val imageList = DataSource().loadImages()
-        val image = imageFromId(imageList, imageId)
 
+        val image = imageFromId(imageId)
+        Log.e("CasaActivity","Ausgewählte Image: $image")
         if (image != null) {
             binding.cover1.setImageResource(image.imageSrc)
             binding.title1.text = image.description
         }
     }
 
-    private fun imageFromId(imageList: List<Image>, imageId: Int): Image? {
+    private fun imageFromId(imageId: Int): Image? {
+        Log.e("CasaActivity","Images: ${imageList.size}")
         for (image in imageList) {
-            if (image.imageSrc == imageId)
+            if (image.id == imageId)
                 return image
         }
         return null

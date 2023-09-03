@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.abschlussaufgabe.activities.CasaActivity
 import com.example.abschlussaufgabe.activities.MainActivity
 import com.example.abschlussaufgabe.adapter.ImageAdapter
-import com.example.abschlussaufgabe.data.DataSource
 import com.example.abschlussaufgabe.data.model.IMAGE_ID_EXTRA
 import com.example.abschlussaufgabe.data.model.Image
 import com.example.abschlussaufgabe.databinding.FragmentCasaBinding
