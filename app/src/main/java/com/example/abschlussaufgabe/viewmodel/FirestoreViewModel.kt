@@ -53,7 +53,7 @@ class FirestoreViewModel : ViewModel() {
                     _currentUser.value = User(
                         userId,
                         document.data?.get("name").toString(),
-                        document.data?.get("score").toString()
+                        document.data?.get("score").toString().toInt()
                     )
                 } else {
                     Log.d(TAG, "No such document")

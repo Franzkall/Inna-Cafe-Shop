@@ -74,18 +74,18 @@ class RegisterFragment : Fragment() {
         // Beobachtet Änderungen im aktuellen Benutzerstatus
         authViewModel.currentUser.observe(viewLifecycleOwner) { firebaseUser ->
             if (firebaseUser != null) {
-                // Erstellt ein neues Benutzerobjekt mit den Registrierungsdaten
                 val user = User(
                     firebaseUser.uid,
                     binding.tietEmail.text.toString(),
-                    binding.btRegister.text.toString()
+                    binding.tietPass.text.toString().toInt()
+
                 )
 
                 // Fügt den neuen Benutzer zu Firestore hinzu
                 storeViewModel.addNewUser(user)
 
                 // Navigiert zum Hauptbildschirm nach erfolgreicher Registrierung
-                findNavController().navigate(R.id.casaFragment)
+                findNavController().navigate(R.id.userFragment)
             }
         }
     }

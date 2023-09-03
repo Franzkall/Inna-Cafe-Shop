@@ -24,6 +24,7 @@ class AuthViewModel : ViewModel() {
      * Registriert einen neuen Benutzer mit der angegebenen E-Mail und Passwort.
      */
     fun register(email: String, password: String) {
+
         firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { authResult ->
             if (authResult.isSuccessful) {
                 // Bei erfolgreicher Registrierung wird der Benutzer automatisch eingeloggt
@@ -38,6 +39,7 @@ class AuthViewModel : ViewModel() {
      * Loggt den Benutzer mit der angegebenen E-Mail und Passwort ein.
      */
     fun login(email: String, password: String) {
+
         firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener { authResult ->
             if (authResult.isSuccessful) {
                 // Aktualisiert den aktuellen Benutzer im LiveData

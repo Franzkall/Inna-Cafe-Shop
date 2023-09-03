@@ -102,6 +102,11 @@
             android:id="@+id/action_onboardingFragment_to_casaFragment"
             app:destination="@id/casaFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.abschlussaufgabe.ui.UserFragment"
+        tools:layout="@layout/fragment_user"
+        android:label="UserFragment" />
 
 </navigation>
 

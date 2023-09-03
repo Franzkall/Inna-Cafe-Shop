@@ -70,8 +70,10 @@ class LoginFragment : Fragment() {
         viewModel.currentUser.observe(viewLifecycleOwner) { user ->
             if (user != null) {
                 // Navigiert zur Startseiten-Fragment, wenn Benutzer eingeloggt ist
-                findNavController().navigate(R.id.homeFragment)
+                findNavController().navigate(R.id.userFragment)
+            }
+
             }
         }
     }
-}
+

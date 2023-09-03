@@ -48,10 +48,10 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
             // addContentView(crashButton, ViewGroup.LayoutParams(
             // ViewGroup.LayoutParams.WRAP_CONTENT))
 
-            Firebase.initialize(context = this)
-            Firebase.appCheck.installAppCheckProviderFactory(
-                PlayIntegrityAppCheckProviderFactory.getInstance(),
-            )
+           // Firebase.initialize(context = this)
+           // Firebase.appCheck.installAppCheckProviderFactory(
+               // PlayIntegrityAppCheckProviderFactory.getInstance(),
+           // )
         }
 
         // Sucht das NavHostFragment
