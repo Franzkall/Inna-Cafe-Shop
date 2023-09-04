@@ -49,3 +49,13 @@ interface MyApiService {
 object MyApi {
     val retroFitService: MyApiService by lazy { retrofit.create(MyApiService::class.java) }
 }
+
+/**
+ * Fachlicher Kommentar:
+ *
+ * Diese Datei enthält die Definition einer Retrofit-Schnittstelle (MyApiService), die dazu dient,
+ * Getränkeinformationen von einer externen API abzurufen. Der Code enthält auch die Konfiguration
+ * des Moshi-Parsers und die Einrichtung des Retrofit-Clients für die Kommunikation mit der API.
+ * Dieses Modul ist essentiell, um Daten aus einer externen Quelle in die App zu integrieren und
+ * stellt eine wichtige Verbindung zur externen Datenquelle dar.
+ */

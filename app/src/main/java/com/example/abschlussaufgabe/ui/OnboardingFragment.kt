@@ -90,3 +90,5 @@ class OnboardingFragment : Fragment() {
         fragmentTransaction.commit()
     }
 }
+
+/** Fachlicher Kommentar: Dieses Fragment dient als Einführung für die App und zeigt eine Folge von Bildern und Informationen über die App-Funktionen. Benutzer können durch die Onboarding-Folien navigieren und am Ende zur Hauptansicht der App gelangen. Dieses Fragment hilft neuen Benutzern, sich mit der App vertraut zu machen. */

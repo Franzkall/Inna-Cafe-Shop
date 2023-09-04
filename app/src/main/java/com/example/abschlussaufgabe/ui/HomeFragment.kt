@@ -35,7 +35,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Das Layout für das Fragment wird aufgeblasen und das Binding-Objekt initialisiert.
+        // Das Layout für das Fragment wird aufgeblasen, und das Binding-Objekt wird initialisiert.
         binding = FragmentHomeBinding.inflate(layoutInflater)
         return binding.root
     }

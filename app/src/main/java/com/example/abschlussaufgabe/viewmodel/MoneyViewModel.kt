@@ -33,3 +33,10 @@ class MoneyFragmentViewModel : ViewModel() {
         }
     }
 }
+/** Fachlicher Kommentar:
+ * Das MoneyFragmentViewModel ist für die Bereitstellung von Getränken mit Preisen für das MoneyFragment verantwortlich.
+ * Es verwendet das ApiRepository, um auf Daten von einem externen API-Dienst (MyApi) zuzugreifen und diese im MoneyFragment anzuzeigen.
+ * Das ViewModel initialisiert die Liste von Getränken und lädt sie, sobald es erstellt wird.
+ * Es verwendet Kotlin Coroutines und den viewModelScope, um die Nebenläufigkeit zu verwalten und die Getränkedaten abzurufen.
+ * Die Methode `exampleMethod` dient nur zu Testzwecken und kann für Debugging-Zwecke verwendet werden.
+ */

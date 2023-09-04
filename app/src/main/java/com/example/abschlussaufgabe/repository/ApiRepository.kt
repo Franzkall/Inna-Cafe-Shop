@@ -33,3 +33,12 @@ class ApiRepository(private val api: MyApi) {
         }
     }
 }
+
+/**
+ * Fachlicher Kommentar:
+ *
+ * Die `ApiRepository`-Klasse fungiert als Vermittler zwischen der App und einer externen API.
+ * Sie verwendet die `MyApi`-Schnittstelle, um Getränkeinformationen von der API abzurufen und sie in einer LiveData-Instanz zu speichern.
+ * Diese Informationen können dann von verschiedenen Teilen der App, insbesondere vom "MoneyFragment", abgerufen und angezeigt werden.
+ * Im Falle eines Fehlers wird eine Fehlermeldung protokolliert.
+ */

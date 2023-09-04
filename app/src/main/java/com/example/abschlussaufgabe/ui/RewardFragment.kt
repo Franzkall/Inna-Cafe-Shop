@@ -153,3 +153,7 @@ class RewardFragment : Fragment() {
         private const val CAMERA_REQUEST_CODE = 101
     }
 }
+
+/**Fachlicher Kommentar:
+Dieses Fragment ermöglicht es Benutzern, QR-Codes zu scannen. Es verwendet die CodeScanner-Bibliothek, um die Kamera zu initialisieren und QR-Codes zu decodieren. Benutzer müssen die Kameraberechtigung gewähren, damit diese Funktion ordnungsgemäß funktioniert. Der gescannte QR-Code-Text wird angezeigt, sobald er erkannt wird.*/
+

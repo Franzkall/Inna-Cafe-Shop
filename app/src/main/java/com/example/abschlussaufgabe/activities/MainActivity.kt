@@ -16,6 +16,8 @@ import com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderF
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.ktx.initialize
 
+// MainActivity
+
 /**
  * Die Hauptaktivität der App.
  */
@@ -48,10 +50,10 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
             // addContentView(crashButton, ViewGroup.LayoutParams(
             // ViewGroup.LayoutParams.WRAP_CONTENT))
 
-           // Firebase.initialize(context = this)
-           // Firebase.appCheck.installAppCheckProviderFactory(
-               // PlayIntegrityAppCheckProviderFactory.getInstance(),
-           // )
+             Firebase.initialize(context = this)
+             Firebase.appCheck.installAppCheckProviderFactory(
+             PlayIntegrityAppCheckProviderFactory.getInstance(),
+             )
         }
 
         // Sucht das NavHostFragment
@@ -89,6 +91,8 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
 
     /**
      * Überprüft, ob die App zum ersten Mal gestartet wird.
+     *
+     * @return true, wenn die App zum ersten Mal gestartet wird, andernfalls false.
      */
     private fun isFirstTimeLaunch(): Boolean {
         val sharedPreferences = getPreferences(MODE_PRIVATE)
@@ -103,3 +107,12 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
         return isFirstTime
     }
 }
+
+/**
+ * Fachlicher Kommentar:
+ *
+ * Diese Aktivität ist die Hauptaktivität der App und dient als Ausgangspunkt für die Navigation und
+ * Steuerung der App. Sie enthält die Initialisierung der Benutzeroberfläche, die Steuerung der
+ * Navigation zwischen verschiedenen Fragmenten und die Aktualisierung der Toolbar-Ansicht. Zudem
+ * wird überprüft, ob die App zum ersten Mal gestartet wird, und entsprechend navigiert.
+ */

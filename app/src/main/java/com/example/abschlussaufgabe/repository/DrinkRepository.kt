@@ -143,3 +143,4 @@ object Repository {
     }
 }
 
+/**Repository ein Singleton-Objekt ist, das als Datenquelle für Getränkeinformationen dient. Es speichert eine Liste von Drink-Objekten und initialisiert diese Liste mit verschiedenen Getränken, die später in der App angezeigt werden können.*/

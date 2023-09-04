@@ -72,8 +72,6 @@ class LoginFragment : Fragment() {
                 // Navigiert zur Startseiten-Fragment, wenn Benutzer eingeloggt ist
                 findNavController().navigate(R.id.userFragment)
             }
-
-            }
         }
     }
-
+}

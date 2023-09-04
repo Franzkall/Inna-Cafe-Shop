@@ -81,3 +81,7 @@ class SortimentFragment : Fragment() {
         }
     }
 }
+
+/**
+Dieses Fragment zeigt eine Auswahl von Getränken im Sortiment an. Es verwendet einen RecyclerView, um die Getränke in einem Raster anzuzeigen, wobei jede Spalte eine spezielle Ansicht für ein Getränk darstellt. Wenn ein Getränk angeklickt wird, wird die "onClick" Methode aufgerufen, die eine Intent erstellt und zur DetailActivity navigiert, um weitere Informationen zum ausgewählten Getränk anzuzeigen. Der Toolbar-Titel wird auf "Specials" aktualisiert, wenn das Fragment angezeigt wird.
+*/

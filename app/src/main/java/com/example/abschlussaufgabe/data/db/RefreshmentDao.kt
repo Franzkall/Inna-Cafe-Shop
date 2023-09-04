@@ -1,4 +1,3 @@
-
 package com.example.abschlussaufgabe.data.db
 
 import androidx.lifecycle.LiveData
@@ -16,14 +15,14 @@ import com.example.abschlussaufgabe.data.model.PriceListData
 // MoneyFragment (Alternative Preisliste-Speicherung über Room, Inspektor-Modus)
 
 @Dao
-interface  RefreshmentDao {
+interface RefreshmentDao {
 
     /**
      * Fügt einen Erfrischungsartikel zur Datenbank hinzu oder ersetzt ihn, wenn er bereits existiert.
      * @param refreshmentDatabase Der hinzuzufügende oder zu ersetzende Erfrischungsartikel.
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-      fun insert(refreshmentDatabase: PriceListData)
+    fun insert(refreshmentDatabase: PriceListData)
 
     /**
      * Fügt eine Liste von Erfrischungsartikeln zur Datenbank hinzu oder ersetzt sie, wenn sie bereits existieren.
@@ -37,7 +36,7 @@ interface  RefreshmentDao {
      * @param refreshmentDatabase Der zu aktualisierende Erfrischungsartikel.
      */
     @Update
-      fun update(refreshmentDatabase: PriceListData)
+    fun update(refreshmentDatabase: PriceListData)
 
     /**
      * Ruft alle Erfrischungsartikel aus der Datenbank ab und liefert sie als LiveData.
@@ -53,5 +52,14 @@ interface  RefreshmentDao {
      */
     @Query("SELECT * from price_table WHERE id = :key")
     fun getById(key: Int): LiveData<PriceListData>
-
 }
+
+/**
+ * Fachlicher Kommentar:
+ *
+ * Diese Datei definiert ein Data Access Object (DAO) zur Interaktion mit der Datenbank für
+ * Erfrischungsartikel. Das DAO enthält Methoden zum Einfügen, Aktualisieren und Abfragen von
+ * Erfrischungsartikeln in der Datenbank. Die Datenbank wird verwendet, um Preisinformationen für
+ * Erfrischungsartikel zu speichern und abzurufen. Dies ist wichtig, um aktuelle Preislisten in der
+ * App anzuzeigen und sie bei Bedarf zu aktualisieren.
+ */

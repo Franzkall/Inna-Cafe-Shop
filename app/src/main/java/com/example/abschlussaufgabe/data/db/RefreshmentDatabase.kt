@@ -38,3 +38,12 @@ fun getDataBase(context: Context): RefreshmentDatabase {
     }
     return INSTANCE
 }
+/**
+ * Fachlicher Kommentar:
+ *
+ * Diese Datei definiert eine Room-Datenbankklasse (RefreshmentDatabase) für die Speicherung von
+ * Erfrischungsartikeldaten. Die Datenbank enthält eine Tabelle (entities), die PriceListData-Objekte
+ * speichert. Die Methode `getDatabase` wird verwendet, um eine Instanz der Datenbank zu erstellen oder
+ * abzurufen. Die Datenbank ist entscheidend für die Speicherung und Verwaltung von Preisinformationen
+ * für Erfrischungsartikel in der App.
+ */

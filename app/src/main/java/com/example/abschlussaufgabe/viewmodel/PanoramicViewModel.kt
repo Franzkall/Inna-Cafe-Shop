@@ -49,3 +49,11 @@ class PanoramicViewModel : ViewModel() {
         loop()
     }
 }
+/** Fachlicher Kommentar:
+ * Das PanoramicViewModel ist für die Anzeige von ständig wechselnden Bildinformationen im ViewFragment verantwortlich.
+ * Es verwendet eine Liste von Panoramic-Objekten, die Bildinformationen repräsentieren.
+ * Das ViewModel initialisiert den Bildwechselzyklus, der alle 4 Sekunden ein neues Bild anzeigt.
+ * Die LiveData `pictureData` wird verwendet, um die aktuellen Bildinformationen an das ViewFragment zu übermitteln.
+ * Der Zyklus wird mit einer Verzögerung von 4 Sekunden gestartet und zeigt nacheinander verschiedene Bilder an.
+ * Dies ermöglicht eine dynamische Anzeige von Bildern im ViewFragment.
+ */

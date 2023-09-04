@@ -9,6 +9,8 @@ import com.example.abschlussaufgabe.data.model.Drink
 import com.example.abschlussaufgabe.databinding.ActivityDetailBinding
 import com.example.abschlussaufgabe.repository.Repository.drinkList
 
+ //SortimentFragment
+
 /**
  * Diese Aktivität zeigt Details zu einem ausgewählten Getränk an.
  */
@@ -55,6 +57,9 @@ class DetailActivity : AppCompatActivity() {
 
     /**
      * Diese Methode sucht nach einem Getränk in der Liste basierend auf seiner ID.
+     *
+     * @param drinkId Die ID des gesuchten Getränks.
+     * @return Das gefundene Getränk oder null, wenn es nicht gefunden wurde.
      */
     private fun drinkFromId(drinkId: Int): Drink? {
         Log.e("Detail", "Größe der Getränkeliste: ${drinkList.size}")
@@ -65,3 +70,12 @@ class DetailActivity : AppCompatActivity() {
         return null
     }
 }
+
+/**
+ * Fachlicher Kommentar:
+ *
+ * Diese Aktivität dient dazu, die Details eines ausgewählten Getränks anzuzeigen. Sie extrahiert die
+ * Getränk-ID aus den Intent-Extras, sucht das entsprechende Getränk in einer Liste von Getränken und
+ * aktualisiert die Benutzeroberfläche mit den Details des gefundenen Getränks. Dieser Code ist ein
+ * Beispiel für die Verwendung von Android's Data Binding und Navigation Component.
+ */

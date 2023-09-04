@@ -1,17 +1,16 @@
-
-
 package com.example.abschlussaufgabe.data.exampledata
 
 import com.example.abschlussaufgabe.data.model.PriceListData
+
 /**
  * Beispiel-Daten für Erfrischungsartikel.
  */
 
- //MoneyFragment (Inspektor - Modus)
+// MoneyFragment (Inspektor - Modus)
 object ListData {
 
-   val refreshment1 = PriceListData(
-         id = 1,
+    val refreshment1 = PriceListData(
+        id = 1,
         itemName = "Espresso",
         price = 2.30,
     )
@@ -54,7 +53,7 @@ object ListData {
         id = 9,
         itemName = "Caffe Mocca",
         price = 3.90,
-   )
+    )
     val refreshment10 = PriceListData(
         id = 10,
         itemName = "Caffe Mocca Bianco",
@@ -72,7 +71,7 @@ object ListData {
     )
     val refreshment13 = PriceListData(
         id = 13,
-        itemName = "Milchkaffe",
+        itemName = "Milchkaffee",
         price = 3.30,
     )
     val refreshment14 = PriceListData(
@@ -82,12 +81,12 @@ object ListData {
     )
     val refreshment15 = PriceListData(
         id = 15,
-        itemName = "Kakao ohne sahne",
+        itemName = "Kakao ohne Sahne",
         price = 3.20,
     )
     val refreshment16 = PriceListData(
         id = 16,
-        itemName = "Kakao mit sahne",
+        itemName = "Kakao mit Sahne",
         price = 3.70,
     )
     val refreshment17 = PriceListData(
@@ -102,7 +101,7 @@ object ListData {
     )
     val refreshment19 = PriceListData(
         id = 19,
-        itemName = "Tee (verschiedene sorten",
+        itemName = "Tee (verschiedene Sorten)",
         price = 2.70,
     )
     val refreshment20 = PriceListData(
@@ -111,3 +110,12 @@ object ListData {
         price = 3.70,
     )
 }
+
+/**
+ * Fachlicher Kommentar:
+ *
+ * Diese Datei enthält Beispieldaten für Erfrischungsartikel (PriceListData-Objekte). Diese Daten
+ * können verwendet werden, um in der Entwicklungs- und Testphase der App Preisinformationen für
+ * Erfrischungsartikel zu simulieren und zu überprüfen. Die Beispieldaten erleichtern auch das
+ * Testen der Datenbank und anderer Funktionen, die auf diese Daten zugreifen.
+ */

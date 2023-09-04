@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.abschlussaufgabe.data.model.Drink
 import com.example.abschlussaufgabe.databinding.HotAndColdBinding
 import com.example.abschlussaufgabe.ui.SortimentFragment
+
 // SortimentFragment
+
 /**
  * Adapter-Klasse, die Drinks in einer RecyclerView anzeigt.
  */
@@ -56,3 +58,13 @@ class DrinkAdapter(
         }
     }
 }
+
+/**
+ * Fachlicher Kommentar:
+ *
+ * Der DrinkAdapter ist eine wichtige Komponente in der RecyclerView-Ansicht des Sortiment-Fragments.
+ * Er ist verantwortlich für das Anzeigen von Drink-Objekten in der Liste und ermöglicht es, auf
+ * Klick-Ereignisse auf Drinks zu reagieren. Dieser Adapter ist ein Schlüsselelement für die
+ * Benutzeroberfläche des Sortiment-Fragments und erleichtert die Anzeige von Getränken in einer
+ * scrollbaren Liste.
+ */

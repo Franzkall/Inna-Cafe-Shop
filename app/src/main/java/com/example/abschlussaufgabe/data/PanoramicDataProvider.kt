@@ -27,3 +27,11 @@ class PanoramicDataProvider {
      */
     fun getPictures() = picture
 }
+/**
+ * Fachlicher Kommentar:
+ *
+ * Die Datenklasse `User` dient zur Speicherung von Benutzerinformationen in der App.
+ * Jedes `User`-Objekt enthält eine eindeutige Benutzer-ID, den Namen des Benutzers und seine Punktzahl oder Bewertung.
+ * Diese Informationen werden normalerweise im "RegisterFragment" verwendet, um Benutzerdaten zu erfassen und zu verarbeiten.
+ * Die Verwendung dieser Datenklasse erleichtert die Verwaltung und Verarbeitung von Benutzerdaten in der App.
+ */

@@ -1,4 +1,4 @@
-//OnboardingFragment
+// OnboardingFragment
 
 /**
  * Adapter-Klasse zur Verwaltung der Onboarding-Item-Daten und zur Bindung an die RecyclerView.
@@ -14,6 +14,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.OnboardingItem
 
+/**
+ * Adapter-Klasse zur Verwaltung der Onboarding-Item-Daten und zur Bindung an die RecyclerView.
+ *
+ * @param onboardingItems Die Liste der Onboarding-Items, die angezeigt werden sollen.
+ */
 class OnboardingItemAdapter(private val onboardingItems: List<OnboardingItem>) :
     RecyclerView.Adapter<OnboardingItemAdapter.OnboardingItemViewHolder>() {
 
@@ -66,3 +71,13 @@ class OnboardingItemAdapter(private val onboardingItems: List<OnboardingItem>) :
         return onboardingItems.size
     }
 }
+
+/**
+ * Fachlicher Kommentar:
+ *
+ * Der OnboardingItemAdapter ist eine wichtige Komponente zur Anzeige von Onboarding-Items in einer
+ * RecyclerView. Diese Adapterklasse ermöglicht es, die Daten der Onboarding-Items an die
+ * zugehörigen UI-Elemente zu binden und sie in der Benutzeroberfläche des Onboarding-Fragments
+ * anzuzeigen. Dies ist entscheidend für die Einführung und Erklärung von Funktionen und Inhalten in
+ * der App für neue Benutzer.
+ */

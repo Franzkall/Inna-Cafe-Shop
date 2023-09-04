@@ -78,7 +78,6 @@ class RegisterFragment : Fragment() {
                     firebaseUser.uid,
                     binding.tietEmail.text.toString(),
                     binding.tietPass.text.toString().toInt()
-
                 )
 
                 // Fügt den neuen Benutzer zu Firestore hinzu
@@ -90,3 +89,8 @@ class RegisterFragment : Fragment() {
         }
     }
 }
+/** Dieses Fragment ermöglicht es Benutzern, sich für die Anwendung zu registrieren.
+ Es interagiert mit dem Authentifizierungs-ViewModel, um die Registrierung durchzuführen,
+ und dem Firestore-ViewModel, um Benutzerdaten in der Firestore-Datenbank zu speichern.
+ Nach erfolgreicher Registrierung wird der Benutzer zum Hauptbildschirm weitergeleitet.*/
+

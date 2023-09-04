@@ -21,12 +21,10 @@ import com.example.abschlussaufgabe.viewmodel.RefreshmentViewModel
 class MoneyFragment : Fragment() {
 
     // ViewModel für dieses Fragment
-
     private val viewModel: MoneyFragmentViewModel by viewModels()
     private val refreshmentViewModel: RefreshmentViewModel by viewModels()
 
     // Binding-Objekt für das Fragment
-
     private lateinit var binding: FragmentMoneyBinding
 
     /**
@@ -50,26 +48,20 @@ class MoneyFragment : Fragment() {
         refreshmentViewModel.benjamin()
 
         // Initialisierung des ViewModels und Adapters.
-
         // Der RecyclerView wird mit dem Adapter verbunden.
-
         binding.recyclerView2
 
         // Toolbar-Titel wird aktualisiert
-
         val activity: MainActivity = requireActivity() as MainActivity
         activity.toolbarTitle.text = "Preisliste"
 
         // Beobachtung der Getränkeliste im ViewModel, um den Adapter zu aktualisieren.
-
         viewModel.drinks.observe(viewLifecycleOwner, Observer { drinks ->
 
             // Die Preisliste-Daten aus den Getränkedaten erstellen und in die Datenbank einfügen.
-
             //createPriceListData(drinks)
 
             // Den RecyclerView-Adapter mit den Getränkedaten aktualisieren.
-
             binding.recyclerView2.adapter = DrinkItemsAdapter(drinks)
         })
     }
@@ -79,7 +71,7 @@ class MoneyFragment : Fragment() {
      *
      * @param drinks Die Liste der Getränkedaten.
      */
- /*  private fun createPriceListData(drinks: List<DrinkItems>) {
+    /* private fun createPriceListData(drinks: List<DrinkItems>) {
         val priceListData = mutableListOf<PriceListData>()
         for ((id, drink) in drinks.withIndex()) {
             val item = PriceListData(id = id.toLong(), itemName = drink.drink, price = drink.price.toDouble())
@@ -94,7 +86,8 @@ class MoneyFragment : Fragment() {
      * @param priceListData Die Liste der Preisliste-Daten.
      */
     private fun insertIntoDatabase(priceListData: List<PriceListData>) {
-       refreshmentViewModel.insertAllRefreshment(priceListData)
+        refreshmentViewModel.insertAllRefreshment(priceListData)
     }
 }
 
+/** Fachlicher Kommentar: Dieses Fragment zeigt eine Preisliste von Getränken an und aktualisiert sie mithilfe eines Adapters. Die Getränkeinformationen werden aus dem ViewModel abgerufen und in der Preisliste angezeigt. Es besteht die Möglichkeit, Preisdaten aus den Getränkeinformationen zu erstellen und sie in die Datenbank einzufügen, was jedoch derzeit auskommentiert ist. */
