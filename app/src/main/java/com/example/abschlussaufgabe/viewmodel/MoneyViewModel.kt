@@ -21,7 +21,7 @@ class MoneyFragmentViewModel : ViewModel() {
     init {
         loadDrinks()
     }
-    fun stephan() {
+   fun stephan() {
        Log.e("Hallo", "Hello")
     }
     /**

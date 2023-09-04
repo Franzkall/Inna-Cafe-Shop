@@ -53,7 +53,7 @@ class MoneyFragment : Fragment() {
 
         // Der RecyclerView wird mit dem Adapter verbunden.
 
-        val recyclerView: RecyclerView = binding.recyclerView2
+        binding.recyclerView2
 
         // Toolbar-Titel wird aktualisiert
 
@@ -66,7 +66,7 @@ class MoneyFragment : Fragment() {
 
             // Die Preisliste-Daten aus den Getränkedaten erstellen und in die Datenbank einfügen.
 
-            createPriceListData(drinks)
+            //createPriceListData(drinks)
 
             // Den RecyclerView-Adapter mit den Getränkedaten aktualisieren.
 
@@ -79,14 +79,14 @@ class MoneyFragment : Fragment() {
      *
      * @param drinks Die Liste der Getränkedaten.
      */
-   private fun createPriceListData(drinks: List<DrinkItems>) {
+ /*  private fun createPriceListData(drinks: List<DrinkItems>) {
         val priceListData = mutableListOf<PriceListData>()
         for ((id, drink) in drinks.withIndex()) {
             val item = PriceListData(id = id.toLong(), itemName = drink.drink, price = drink.price.toDouble())
             priceListData.add(item)
         }
         insertIntoDatabase(priceListData)
-    }
+    }*/
 
     /**
      * Fügt die erstellten Preisliste-Daten in die Datenbank ein.
