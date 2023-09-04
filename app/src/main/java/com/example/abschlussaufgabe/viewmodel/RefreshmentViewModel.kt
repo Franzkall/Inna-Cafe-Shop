@@ -28,9 +28,28 @@ class RefreshmentViewModel(application: Application) : AndroidViewModel(applicat
         viewModelScope.launch {
            val exampleData = ListData
             try {
-               repository.insert(exampleData.refreshment1)
+                repository.insert(exampleData.refreshment1)
                 repository.insert(exampleData.refreshment2)
-                // andere refreshment......
+                repository.insert(exampleData.refreshment3)
+                repository.insert(exampleData.refreshment4)
+                repository.insert(exampleData.refreshment5)
+                repository.insert(exampleData.refreshment6)
+                repository.insert(exampleData.refreshment7)
+                repository.insert(exampleData.refreshment8)
+                repository.insert(exampleData.refreshment9)
+                repository.insert(exampleData.refreshment10)
+                repository.insert(exampleData.refreshment11)
+                repository.insert(exampleData.refreshment12)
+                repository.insert(exampleData.refreshment13)
+                repository.insert(exampleData.refreshment14)
+                repository.insert(exampleData.refreshment15)
+                repository.insert(exampleData.refreshment16)
+                repository.insert(exampleData.refreshment17)
+                repository.insert(exampleData.refreshment18)
+                repository.insert(exampleData.refreshment19)
+                repository.insert(exampleData.refreshment20)
+
+
            } catch (e: Exception) {
                Log.d(TAG, "Failed to insert example data into Database: $e")
             }
