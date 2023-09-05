@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AbschlussAufgabe</string>
+    <string name="app_name">Inna Cafe-Shop</string>
 
     //Toolbar Strings
     <string name="toolbar_welcome">Willkommen</string>
@@ -53,6 +53,10 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="logout">Logout</string>
+
+    <string name="toast_name">Toast text</string>
+
+
 
 
 </resources>

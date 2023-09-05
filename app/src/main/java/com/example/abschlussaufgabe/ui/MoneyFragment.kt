@@ -1,9 +1,11 @@
 package com.example.abschlussaufgabe.ui
 
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -51,9 +53,20 @@ class MoneyFragment : Fragment() {
         // Der RecyclerView wird mit dem Adapter verbunden.
         binding.recyclerView2
 
+        // Erzeuge eine Toast-Nachricht
+        val toast = Toast.makeText(requireContext(), "Die Preisliste wird geladen...", Toast.LENGTH_SHORT)
+
+        // Setze die Gravitation (Position) des Toasts
+        toast.setGravity(Gravity.CENTER_VERTICAL, 600, 600) // Hier wird die Gravitation auf die Mitte des Bildschirms gesetzt
+
+        // Zeige den Toast an
+        toast.show()
+
         // Toolbar-Titel wird aktualisiert
         val activity: MainActivity = requireActivity() as MainActivity
         activity.toolbarTitle.text = "Preisliste"
+
+
 
         // Beobachtung der Getränkeliste im ViewModel, um den Adapter zu aktualisieren.
         viewModel.drinks.observe(viewLifecycleOwner, Observer { drinks ->
