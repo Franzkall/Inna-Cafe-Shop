@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.abschlussaufgabe.activities.DetailActivity
@@ -79,6 +80,10 @@ class SortimentFragment : Fragment() {
             // Zeige einen Fehler im Logcat an, wenn eine Ausnahme auftritt.
             Log.e("Sortiment", "Fehler beim Klicken auf Getränk: ${e.message}")
         }
+        // Erzeuge eine Toast-Nachricht
+        val toast = Toast.makeText(requireContext(), "Details", Toast.LENGTH_SHORT)
+        // Zeige den Toast an
+        toast.show()
     }
 }
 

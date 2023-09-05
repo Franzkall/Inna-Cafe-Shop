@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.abschlussaufgabe.activities.CasaActivity
@@ -44,6 +45,11 @@ class CasaFragment : Fragment() {
             layoutManager = GridLayoutManager(requireContext(), 1)
             adapter = imageAdapter
         }
+
+        // Erzeuge eine Toast-Nachricht
+        val toast = Toast.makeText(requireContext(), "Willkommen", Toast.LENGTH_SHORT)
+        // Zeige den Toast an
+        toast.show()
 
         return binding.root
     }
