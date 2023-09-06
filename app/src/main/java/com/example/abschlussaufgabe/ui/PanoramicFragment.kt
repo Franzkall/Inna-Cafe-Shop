@@ -54,7 +54,7 @@ class PanoramicFragment : Fragment() {
 }
 /**Fachlicher Kommentar:
 
-Das ViewFragment ist für die Anzeige von Informationen über ein Bild verantwortlich. Hier sind die wichtigsten Funktionen:
+Das PanoramicFragment ist für die Anzeige von Informationen über ein Bild verantwortlich. Hier sind die wichtigsten Funktionen:
 
 onCreateView: In dieser Methode wird die Benutzeroberfläche des Fragments erstellt, indem das Layout aufgeblasen wird.
 onViewCreated: Hier werden Daten im ViewModel beobachtet, um die Ansicht zu aktualisieren. Die Bildinformationen, einschließlich des Bilds, des Stadtnamens und der Bevölkerungszahl, werden aus dem ViewModel abgerufen und in der Benutzeroberfläche angezeigt. Der Titel der Toolbar in der MainActivity wird ebenfalls aktualisiert.*/

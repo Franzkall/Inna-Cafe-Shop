@@ -55,8 +55,7 @@
     <string name="logout">Logout</string>
 
     <string name="toast_name">Toast text</string>
-
-
+    <string name="todo">TODO</string>
 
 
 </resources>

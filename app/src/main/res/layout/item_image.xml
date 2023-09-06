@@ -27,7 +27,7 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 tools:srcCompat="@drawable/nuovo3"
-                android:contentDescription="TODO" />
+                android:contentDescription="@string/todo" />
 
         </androidx.cardview.widget.CardView>
 

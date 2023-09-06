@@ -70,7 +70,7 @@ class CasaFragment : Fragment() {
 /**
  * Fachlicher Kommentar:
  *
- * Das `CasaFragment` ist ein Fragment der Casa-Ansicht in der App. Es zeigt eine Liste von Bildern an, und wenn auf ein Bild geklickt wird, wird
+ * Das `CasaFragment` ist ein Fragment der Home-Ansicht in der App. Es zeigt eine Liste von Bildern an, und wenn auf ein Bild geklickt wird, wird
  * der Benutzer zur `CasaActivity` weitergeleitet. Das Fragment verwendet ein Lazy-initialisiertes `ImageAdapter`-Objekt zur Anzeige der Bilder in
  * einer RecyclerView. Das Fragment kümmert sich auch um die Aktualisierung der Toolbar-Titel. Es handelt sich um eine wichtige Benutzeroberflächenkomponente
  * in der App, die den Benutzern den Zugriff auf verschiedene Bilder und Informationen ermöglicht.

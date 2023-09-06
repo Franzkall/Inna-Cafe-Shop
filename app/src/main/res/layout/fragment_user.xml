@@ -17,24 +17,36 @@
             android:id="@+id/tvLogged"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hallo"
+            android:text="Hallo Fabienne"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="24sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/tvUser" />
+            app:layout_constraintBottom_toTopOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="197dp"
+            android:layout_height="181dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="132dp"
+            android:src="@drawable/qr1"
+            app:layout_constraintBottom_toTopOf="@+id/tvUser"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLogged" />
 
         <TextView
             android:id="@+id/tvUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
+            android:text="Du hast 120 Punkten"
             android:textSize="16sp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/tvLogged"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/tvPoints" />
@@ -43,7 +55,7 @@
             android:id="@+id/tvPoints"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Punktestand"
+            android:text="Löse deine Punkten"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -51,6 +63,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

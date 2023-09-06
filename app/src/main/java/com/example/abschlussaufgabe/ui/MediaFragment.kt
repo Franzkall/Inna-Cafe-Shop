@@ -65,4 +65,5 @@ class MediaFragment : Fragment() {
             Log.e("MediaFragment", "Fehler beim Starten der Aktivität: ${e.message}")
         }
     }
-} /** Fachlicher Kommentar: Dieses Fragment dient dazu, Links zu den Social-Media-Seiten der Anwendung anzuzeigen und ermöglicht den Benutzern, diese Seiten in einem Webbrowser zu öffnen. Die Links sind für TikTok und Instagram. */
+}
+/** Fachlicher Kommentar: Dieses Fragment dient dazu, Links zu den Social-Media-Seiten der Anwendung anzuzeigen und ermöglicht den Benutzern, diese Seiten in einem Webbrowser zu öffnen. Die Links sind für TikTok und Instagram. */
