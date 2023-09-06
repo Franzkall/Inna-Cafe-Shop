@@ -20,7 +20,7 @@
             android:layout_marginTop="16sp"
             android:layout_gravity="center"
             android:adjustViewBounds="true"
-            android:src="@drawable/o1"
+
 
             android:background="@drawable/rounded_corner"
             app:layout_constraintTop_toTopOf="parent"

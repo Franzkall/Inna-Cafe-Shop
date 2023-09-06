@@ -14,7 +14,7 @@ object CasaImageRepository {
         val image1 = Image(
             R.drawable.pk2,
             "Inna's-Cafe-Shop",
-            text =  "LavAzza Kaffee-Shop-Moers - Homberger Str.5 - Tel: 02841 91660910"
+            text =  "LavAzza Kaffee-Shop-Moers - Homberger Str.5 - Tel: 02841 91660910 - Email Adresse _moers@hotmail.com"
         ).apply { id = 1 }
         imageList.add(image1)
     }

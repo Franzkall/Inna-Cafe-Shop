@@ -67,7 +67,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewFragment"
-        android:name="com.example.abschlussaufgabe.ui.ViewFragment"
+        android:name="com.example.abschlussaufgabe.ui.PanoramicFragment"
         tools:layout="@layout/fragment_view"
         android:label="ViewFragment" >
 

@@ -47,9 +47,7 @@ class CasaFragment : Fragment() {
         }
 
         // Erzeuge eine Toast-Nachricht
-        Toast.makeText(requireContext(), "Willkommen", Toast.LENGTH_SHORT).show()
-        // Zeige den Toast an
-       // toast.show()
+        //Toast.makeText(requireContext(), "Willkommen", Toast.LENGTH_SHORT).show()
 
         return binding.root
     }

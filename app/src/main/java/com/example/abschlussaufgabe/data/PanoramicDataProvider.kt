@@ -16,10 +16,10 @@ class PanoramicDataProvider {
      * Initialisierung der Bilderdaten.
      */
     init {
-        picture.add(Panoramic("London", R.drawable.g1, "Ecco ksksksksksks, skdkkskffjf, kfnfjfjfnfjfj, djfnfjffjf, dhfjfnfh"))
-        picture.add(Panoramic("London", R.drawable.g5, "Ecco"))
-        picture.add(Panoramic("Mailand", R.drawable.g3, "Allora"))
-        picture.add(Panoramic("Mailand", R.drawable.g4, "Andiamo"))
+        picture.add(Panoramic("Smoothie Bar", R.drawable.g1, "Smoothie-Bar: Erfrieschende und gesunde Smoothies frisch zubereitet!"))
+        picture.add(Panoramic("Croissant und Cappuccino", R.drawable.g5, "Starten Sie ihren Tag wie in Italien mit ein leckeren Croissant und einem Cappuccino"))
+        picture.add(Panoramic("Colazione", R.drawable.g3, "Probieren Sie unser breites Angebot zum Frühstuck"))
+        picture.add(Panoramic("Torten", R.drawable.gs6, "Ausgezeichnete Torten und Patisserie, auch zum Mitnehmen!"))
     }
 
     /**

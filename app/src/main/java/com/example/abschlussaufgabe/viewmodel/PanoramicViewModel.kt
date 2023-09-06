@@ -16,7 +16,7 @@ class PanoramicViewModel : ViewModel() {
     private val pictureData = MutableLiveData<Panoramic>()
     private val pictures = PanoramicDataProvider().getPictures()
     private var currentIndex = 0
-    private val delay = 4000L // Verzögerung in Millisekunden zwischen den Stadtaktualisierungen
+    private val delay = 6000L // Verzögerung in Millisekunden zwischen den Stadtaktualisierungen
 
     /**
      * Initialisierung des ViewModels, startet den Zyklus der Bildaktualisierungen.

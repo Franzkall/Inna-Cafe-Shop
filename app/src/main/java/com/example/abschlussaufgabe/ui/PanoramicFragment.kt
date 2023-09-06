@@ -15,7 +15,7 @@ import com.example.abschlussaufgabe.viewmodel.PanoramicViewModel
 /**
  * Dieses Fragment zeigt Informationen über ein Bild an.
  */
-class ViewFragment : Fragment() {
+class PanoramicFragment : Fragment() {
 
     // ViewModel, das für die Verwaltung der Bildinformationen verantwortlich ist
     private val model: PanoramicViewModel by viewModels()
