@@ -47,9 +47,9 @@ class CasaFragment : Fragment() {
         }
 
         // Erzeuge eine Toast-Nachricht
-        val toast = Toast.makeText(requireContext(), "Willkommen", Toast.LENGTH_SHORT)
+        Toast.makeText(requireContext(), "Willkommen", Toast.LENGTH_SHORT).show()
         // Zeige den Toast an
-        toast.show()
+       // toast.show()
 
         return binding.root
     }

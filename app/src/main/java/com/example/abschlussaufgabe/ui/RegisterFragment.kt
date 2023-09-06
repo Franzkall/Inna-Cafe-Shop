@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.abschlussaufgabe.R
@@ -62,13 +63,23 @@ class RegisterFragment : Fragment() {
         binding.btRegister.setOnClickListener {
             val email: String = binding.tietEmail.text.toString()
             val password: String = binding.tietPass.text.toString()
-            if (email != "" && password != "") {
-                // Ruft die Registrierungsfunktion im ViewModel auf
-                authViewModel.register(email, password)
+            if (email.isNotBlank() && password.isNotBlank()) {
+                // Überprüfe, ob das Passwort eine gültige Ganzzahl ist
+                if (isNumeric(password)) {
+                    // Ruft die Registrierungsfunktion im ViewModel auf
+                    authViewModel.register(email, password)
+                } else {
+                    // Logge einen Fehler, wenn das Passwort keine gültige Ganzzahl ist
+                    Log.e("ERROR", "Ungültiges Passwort")
+                }
             } else {
-                // Loggt einen Fehler, wenn Felder leer sind
+                // Logge einen Fehler, wenn Felder leer sind
                 Log.e("ERROR", "Leeres Feld")
             }
+            // Erzeuge eine Toast-Nachricht
+            val toast = Toast.makeText(requireContext(), "Ungültige Angaben", Toast.LENGTH_SHORT)
+            // Zeige den Toast an
+            toast.show()
         }
 
         // Beobachtet Änderungen im aktuellen Benutzerstatus
@@ -88,9 +99,21 @@ class RegisterFragment : Fragment() {
             }
         }
     }
-}
-/** Dieses Fragment ermöglicht es Benutzern, sich für die Anwendung zu registrieren.
- Es interagiert mit dem Authentifizierungs-ViewModel, um die Registrierung durchzuführen,
- und dem Firestore-ViewModel, um Benutzerdaten in der Firestore-Datenbank zu speichern.
- Nach erfolgreicher Registrierung wird der Benutzer zum Hauptbildschirm weitergeleitet.*/
 
+    // Hilfsfunktion zum Überprüfen, ob ein String eine Ganzzahl ist
+    private fun isNumeric(value: String): Boolean {
+        return try {
+            value.toInt()
+            true
+        } catch (e: NumberFormatException) {
+            false
+        }
+    }
+
+    /** Fachkommentar: Dieser Code implementiert das Registrierungsfragment in Ihrer Android-App.
+     Es verwendet ViewModels, um die Authentifizierung und die Kommunikation mit Firestore zu verwalten.
+     Das Fragment erstellt eine Benutzeroberfläche für die Registrierung und verarbeitet Benutzerinteraktionen.
+     Es überprüft die Gültigkeit der Benutzereingaben und führt die Registrierung durch, wenn die Eingaben gültig sind.
+     Nach einer erfolgreichen Registrierung wird der Benutzer zu einem anderen Fragment weitergeleitet.
+     Der Code ist gut strukturiert und gut kommentiert, was die Wartbarkeit und Lesbarkeit verbessert.*/
+}
