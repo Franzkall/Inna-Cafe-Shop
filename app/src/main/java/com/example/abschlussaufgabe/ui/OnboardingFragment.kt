@@ -48,7 +48,7 @@ class OnboardingFragment : Fragment() {
                 OnboardingItem(
                     onboardingImage = R.drawable.lol2,
                     title = "Punkte sammeln",
-                    description = "Punkte sammeln leicht gemacht: Nutze den Qr-Code Scanner, um bei jedem Einkauf Punkte zu sammeln. Diese kannst du dann gegen dein Lieblingsgetränk eintauschen. Dafür einfach anmelden oder registrieren. Das Login findest du oben links - klicke dazu auf die drei Balken."
+                    description = "Punkte sammeln leicht gemacht: Nutze den Qr-Code Scanner, um bei jedem Einkauf Punkte zu sammeln. Diese kannst du dann gegen dein Lieblingsgetränk eintauschen. Dafür einfach anmelden oder registrieren. Das Login findest du oben recht - klicke dazu auf die drei Balken."
                 ),
                 OnboardingItem(
                     onboardingImage = R.drawable.lol3,

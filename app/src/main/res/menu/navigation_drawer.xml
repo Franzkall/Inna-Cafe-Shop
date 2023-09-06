@@ -23,6 +23,6 @@
             android:id="@+id/userFragment"
             android:icon="@drawable/ic_launcher_foreground"
             android:checked="true"
-            android:title="User" />
+            android:title="Dein Bereich" />
     </group>
 </menu>

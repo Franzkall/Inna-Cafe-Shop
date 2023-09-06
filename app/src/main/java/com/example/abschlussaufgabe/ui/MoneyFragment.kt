@@ -54,7 +54,7 @@ class MoneyFragment : Fragment() {
         binding.recyclerView2
 
         // Erzeuge eine Toast-Nachricht
-        val toast = Toast.makeText(requireContext(), "Die Preisliste wird geladen...", Toast.LENGTH_SHORT)
+        val toast = Toast.makeText(requireContext(), " Preisliste wird geladen...", Toast.LENGTH_SHORT)
 
         // Setze die Gravitation (Position) des Toasts
         toast.setGravity(Gravity.CENTER_VERTICAL, 600, 600) // Hier wird die Gravitation auf die Mitte des Bildschirms gesetzt

@@ -3,6 +3,7 @@ package com.example.abschlussaufgabe.ui
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,6 +40,15 @@ class CasaFragment : Fragment() {
         // Die Toolbar-Titel wird aktualisiert
         val activity: MainActivity = requireActivity() as MainActivity
         activity.toolbarTitle.text = "Willkommen"
+
+        // Erzeuge eine Toast-Nachricht
+        val toast = Toast.makeText(requireContext(), "Willkomen bei Inna ", Toast.LENGTH_SHORT)
+
+        // Setze die Gravitation (Position) des Toasts
+        toast.setGravity(Gravity.CENTER_VERTICAL, 600, 600) // Hier wird die Gravitation auf die Mitte des Bildschirms gesetzt
+
+        // Zeige den Toast an
+        toast.show()
 
         // Die RecyclerView-Einstellungen werden konfiguriert
         binding.imagesRecyclerview.apply {
