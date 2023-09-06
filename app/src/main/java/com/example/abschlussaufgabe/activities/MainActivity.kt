@@ -1,6 +1,8 @@
 package com.example.abschlussaufgabe.activities
 
 import android.os.Bundle
+import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -42,13 +44,13 @@ class MainActivity : AppCompatActivity(), ToolbarTextUpdater {
             binding.drawer.open()
 
             // Absichtliches Auslösen eines Absturzes (auskommentiert)
-            // val crashButton = Button(this)
+             //val crashButton = Button(this)
             // crashButton.text = "Test Crash"
-            // crashButton.setOnClickListener {
-            // throw RuntimeException("Test Crash") // Erzwingt einen Absturz
-            // }
-            // addContentView(crashButton, ViewGroup.LayoutParams(
-            // ViewGroup.LayoutParams.WRAP_CONTENT))
+             //crashButton.setOnClickListener {
+             //throw RuntimeException("Test Crash") // Erzwingt einen Absturz
+             //}
+             //addContentView(crashButton, ViewGroup.LayoutParams(
+             //ViewGroup.LayoutParams.WRAP_CONTENT))
 
              Firebase.initialize(context = this)
              Firebase.appCheck.installAppCheckProviderFactory(
